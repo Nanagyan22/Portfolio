@@ -20,6 +20,13 @@
   .home-content h1 {
     font-size: 3.5rem;
   }
+  /* 992px is a common breakpoint for grid changes */
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  }
 }
 
 /* =========================
@@ -47,22 +54,14 @@
     box-shadow: 6px 6px 12px #1f242d, -6px -6px 12px #1f242d;
     background: #323946;
     min-width: 300px;
-    height: 30rem;
+    height: auto; /* Changed to auto for new nav links */
     text-align: center;
     border-radius: 0.2rem;
-    -webkit-border-radius: 0.2rem;
-    -moz-border-radius: 0.2rem;
-    -ms-border-radius: 0.2rem;
-    -o-border-radius: 0.2rem;
     padding: 3rem 0;
     z-index: 9999999;
     visibility: hidden;
     opacity: 0;
     transition: var(--transition);
-    -webkit-transition: var(--transition);
-    -moz-transition: var(--transition);
-    -ms-transition: var(--transition);
-    -o-transition: var(--transition);
   }
   .navbar.active {
     top: 5rem;
@@ -84,6 +83,9 @@
   .home-content {
     margin-top: -15rem;
     text-align: center;
+  }
+  .home-content .home-intro { /* Center intro text */
+    margin: 1.5rem auto 2.5rem auto;
   }
   .home-content h1 {
     font-size: 4rem;
@@ -115,24 +117,32 @@
   .about-content p {
     text-align: center;
   }
+  .about-content h2 { /* Fix alignment */
+    text-align: center;
+  }
   .about-content p {
     font-size: 1.3rem;
   }
-  .services-container .services-box {
-    flex: 100rem;
+  
+  /* UPDATED Services */
+  .services-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   }
   .services-box p {
     font-size: 1.3rem;
   }
 
+  /* UPDATED Portfolio */
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
-    height: 700px;
   }
-  .portfolio-layer p {
+
+  /* Added for C.V. Section */
+  .cv-container p {
     font-size: 1.3rem;
   }
+
   .contact form {
     max-height: 70rem;
   }
@@ -162,6 +172,13 @@
   .home-content h3 {
     font-size: 2.5rem;
   }
+  /* Make portfolio 1-column earlier on tablets */
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  .services-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================
@@ -189,6 +206,10 @@
   .home-content h3 {
     font-size: 1.6rem;
   }
+  .home-content .home-intro {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
   .social-media {
     margin-left: 1rem;
     margin-bottom: -1rem;
@@ -210,14 +231,31 @@
   .about-content p {
     font-size: 1rem;
   }
+  .stat-box {
+    min-width: 10rem;
+  }
+
   .services-box p {
     font-size: 1rem;
   }
+  .services-box li {
+    font-size: 1rem;
+  }
+
+  /* UPDATED Portfolio */
   .portfolio-container {
-    grid-template-columns: repeat(1, 1fr);
-    height: 1600px;
+    grid-template-columns: 1fr;
     gap: 1.4rem;
   }
+  .portfolio-box {
+    padding: 1.5rem 2rem;
+  }
+
+  /* Added for C.V. Section */
+  .cv-container p {
+    font-size: 1rem;
+  }
+
   .contact form .input-box input,
   .contact form textarea {
     font-size: 1rem;
