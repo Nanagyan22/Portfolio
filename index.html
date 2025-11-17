@@ -1,226 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Francis Afful Gyan — Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ==========================================
+                  Box Icons
+    =========================================== -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- ==========================================
+                  Custom CSS
+    =========================================== -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ==========================================
+                  Breakpoint
+    =========================================== -->
+    <link rel="stylesheet" href="breakpoint.css" />
+    <title>My Portfolio</title>
+  </head>
+  <body>
+    <!-- ==========================================
+                    Header
+    =========================================== -->
+    <header class="header">
+      <a href="#" class="logo">Port<span>folio.</span></a>
 
-  <!-- Box Icons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Specialty</a>
+        <a href="#portfolio">Portfolio</a>
+     
+      </nav>
+    </header>
 
-  <!-- Scroll Reveal -->
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <!-- Typed.js -->
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <style>
-    /* ===== RESET & GLOBAL ===== */
-    * {margin:0; padding:0; box-sizing:border-box;}
-    html {scroll-behavior:smooth;}
-    body {font-family: 'Roboto', sans-serif; line-height:1.6; color:#222; background:#f7f7f7;}
-    a {text-decoration:none; color:inherit;}
-    img {max-width:100%; display:block;}
-
-    /* ===== HEADER ===== */
-    header {
-      width:100%; padding:1rem 5%;
-      display:flex; justify-content:space-between; align-items:center;
-      position:fixed; top:0; left:0; background:#fff; z-index:999;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    header .logo {font-size:1.8rem; font-weight:700; color:#1a1a1a;}
-    header nav {display:flex; gap:2rem;}
-    header nav a {font-weight:500; transition:0.3s; color:#333;}
-    header nav a:hover, header nav a.active {color:#0077b6;}
-    #menu-icon {display:none; font-size:2rem; cursor:pointer;}
-
-    /* ===== HOME ===== */
-    .home {display:flex; align-items:center; justify-content:space-between; padding:8rem 5% 5rem; flex-wrap:wrap; gap:2rem; background:#e0f7fa;}
-    .home-content {max-width:600px;}
-    .home-content h1 {font-size:2.8rem; margin-bottom:0.5rem;}
-    .home-content h3 {font-size:1.5rem; margin-bottom:1rem;}
-    .home-content .btn {display:inline-block; margin-top:1rem; padding:0.6rem 1.5rem; background:#0077b6; color:#fff; border-radius:5px; transition:0.3s;}
-    .home-content .btn:hover {background:#023e8a;}
-    .home-img img {border-radius:15px; max-width:380px;}
-
-    .social-media {margin-top:1rem; display:flex; gap:1rem;}
-    .social-media a {font-size:1.5rem; color:#0077b6;}
-    .social-media a:hover {color:#023e8a;}
-
-    /* ===== ABOUT ===== */
-    .about {display:flex; flex-wrap:wrap; gap:2rem; padding:5rem 5%;}
-    .about-img {flex:1; min-width:280px;}
-    .about-img img {border-radius:10px;}
-    .about-content {flex:2; min-width:280px;}
-    .about-content h2 {font-size:2rem; margin-bottom:1rem;}
-    .about-content p {font-size:1.1rem; margin-bottom:1rem;}
-    .about-content .btn {background:#0077b6; color:#fff; padding:0.5rem 1.2rem; border-radius:5px;}
-    .about-content .btn:hover {background:#023e8a;}
-
-    /* ===== SERVICES ===== */
-    .services {padding:5rem 5%; background:#f1f1f1;}
-    .services h2 {font-size:2rem; text-align:center; margin-bottom:2rem;}
-    .services-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;}
-    .services-box {background:#fff; padding:2rem; border-radius:10px; text-align:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition:0.3s;}
-    .services-box:hover {transform:translateY(-5px);}
-    .services-box i {font-size:2rem; color:#0077b6; margin-bottom:1rem;}
-    .services-box h3 {margin-bottom:0.5rem;}
-    .services-box p {font-size:1rem;}
-
-    /* ===== PORTFOLIO ===== */
-    .portfolio {padding:5rem 5%;}
-    .portfolio h2 {text-align:center; font-size:2rem; margin-bottom:2rem;}
-    .portfolio-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem;}
-    .portfolio-box {background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-    .portfolio-description {padding:1rem;}
-    .portfolio-description h4 {margin-bottom:0.5rem;}
-    .portfolio-description p {font-size:0.95rem; margin-bottom:0.5rem;}
-    .read-more {color:#0077b6; font-weight:600;}
-    .read-more:hover {color:#023e8a;}
-    .explore-more-container {text-align:center; margin-top:2rem;}
-    .explore-more-btn {background:#0077b6; color:#fff; padding:0.6rem 1.5rem; border-radius:5px; display:inline-block;}
-    .explore-more-btn:hover {background:#023e8a;}
-
-    /* ===== CONTACT ===== */
-    .contact {padding:5rem 5%; background:#e0f7fa;}
-    .contact h2 {text-align:center; font-size:2rem; margin-bottom:2rem;}
-    .contact form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:1rem;}
-    .contact input, .contact textarea {padding:0.8rem; border-radius:5px; border:1px solid #ccc; font-size:1rem;}
-    .contact button {padding:0.6rem 1.5rem; border:none; background:#0077b6; color:#fff; border-radius:5px; font-size:1rem; cursor:pointer;}
-    .contact button:hover {background:#023e8a;}
-
-    /* ===== FOOTER ===== */
-    footer {padding:2rem 5%; background:#222; color:#fff; display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem; align-items:center;}
-    footer a {color:#0077b6;}
-    footer a:hover {color:#fff;}
-
-    /* ===== MEDIA QUERIES ===== */
-    @media(max-width:768px){
-      .home {flex-direction:column-reverse; text-align:center;}
-      .home-content h1 {font-size:2.2rem;}
-      .home-content h3 {font-size:1.2rem;}
-      header nav {position:absolute; top:100%; right:0; left:0; background:#fff; flex-direction:column; display:none; padding:2rem;}
-      header nav.active {display:flex;}
-      #menu-icon {display:block;}
-    }
-    @media(max-width:480px){
-      .about-content p,.services-box p,.portfolio-description p {font-size:0.95rem;}
-      .home-img img,.about-img img {max-width:300px;}
-    }
-  </style>
-</head>
-<body>
-  <!-- HEADER -->
-  <header>
-    <a href="#home" class="logo">Port<span>folio.</span></a>
-    <i id="menu-icon" class="bx bx-menu"></i>
-    <nav>
-      <a href="#home" class="active">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Specialty</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-      <a href="Francis_CV.pdf" download class="btn">Download CV</a>
-    </nav>
-  </header>
-
-  <!-- HOME -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Hello 👋, Welcome to my portfolio</h3>
-      <h1>I'm Francis Afful Gyan</h1>
-      <h3>a <span class="multiple-text"></span></h3>
-      <div class="social-media">
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bx-mail-send"></i></a>
+    <!-- ==========================================
+                  Home Section
+    =========================================== -->
+    <section class="home" id="home">
+      <div class="home-content">
+        <h3>Hello👋, Welcome to my portfolio</h3>
+        <h1>I'm Francis Afful Gyan</h1>
+        <h3>a <span class="multiple-text"></span></h3>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/francis-afful-gyan-2b27a5153/"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://github.com/Nanagyan22"><i class="bx bxl-github"></i></a>
+            <a href="mailto:francisaffulgyan@gmail.com"><i class="bx bx-mail-send"></i></a>
+            <a href="https://www.facebook.com/share/1Xv9cFRpPm/"><i class="bx bxl-facebook"></i></a>
+            </div>
+        <!-- add link for your CV into href -->
+        <a href="https://www.linkedin.com/in/francis-afful-gyan-2b27a5153/" class="btn">Let's Connect</a>
       </div>
-      <a href="#contact" class="btn">Let's Connect</a>
-    </div>
-    <div class="home-img"><img src="portpic.png" alt="Francis portrait"></div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-img"><img src="portpic2.png" alt="Francis working"></div>
-    <div class="about-content">
-      <h2>About <span>Me</span></h2>
-      <p>✨ I’m a Data Scientist with experience in ML, BI, AI automation, and analytics. I create data-driven solutions for business growth and insight discovery.</p>
-      <a href="#" class="btn">Read More</a>
-    </div>
-  </section>
+      <div class="home-img">
+        <img src="portpic.png" alt="home" />
+      </div>
+    </section>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2>My <span>Specialty</span></h2>
-    <div class="services-container">
-      <div class="services-box"><i class="bx bx-code-alt"></i><h3>Data Science & ML</h3><p>Predictive modeling, ML pipelines, data-driven solutions.</p></div>
-      <div class="services-box"><i class="bx bxs-paint"></i><h3>BI & Analytics</h3><p>Dashboards, reporting, SQL & Power BI, visualization.</p></div>
-      <div class="services-box"><i class="bx bx-data"></i><h3>Strategic Business</h3><p>Aligning analytics with business objectives and decisions.</p></div>
-    </div>
-  </section>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="portpic2.png" alt="about" />
+      </div>
 
-  <!-- PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
-    <h2>Major <span>Projects</span></h2>
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="loan.png" alt="">
-        <div class="portfolio-description">
-          <h4>Loan Default Prediction</h4>
-          <p>Streamlit ML app for loan risk prediction.</p>
-          <a href="#" class="read-more">CHECK IT OUT</a>
+      <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <p>
+            ✨ I’m a Data Scientist with a strong foundation in business
+            analytics, machine learning, business intelligence, and AI-driven
+            automation, specializing in building intelligent systems that
+            uncover insights, enhance efficiency, and support data-driven strategies.
+            My work combines technical precision with strategic thinking to deliver
+            solutions that create measurable impact.
+        </p>
+        <a href="https://www.linkedin.com/in/francis-afful-gyan-2b27a5153/" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <!-- ==========================================
+                  Services Section
+    =========================================== -->
+    <section class="services" id="services">
+      <h2 class="heading">My <span>Specialty</span></h2>
+
+      <div class="services-container">
+        <div class="services-box">
+          <i class="bx bx-code-alt"></i>
+          <h3>Data Science & Machine Learning</h3>
+          <p>
+            I design and deploy predictive models that uncover
+              patterns, forecast outcomes, and drive data-driven
+              decisions using Python, scikit-learn, and TensorFlow.
+          </p>
+          </div>
+
+        <div class="services-box">
+          <i class="bx bxs-paint"></i>
+          <h3>Business Intelligence & Data Analytics</h3>
+          <p>
+            I create interactive dashboards and reports with Power
+              BI, Tableau, and SQL, transforming complex data into
+              clear insights that drive smarter business decisions.
+          </p>
+          </div>
+
+        <div class="services-box">
+          <i class="bx bx-data"></i>
+          <h3>Strategic Business & Professional Skills</h3>
+          <p>
+            I align data solutions with business goals through strong
+              analytical thinking, communication, and leadership, ensuring
+              strategies deliver measurable impact.
+          </p>
         </div>
       </div>
-      <div class="portfolio-box">
-        <img src="klint.png" alt="">
-        <div class="portfolio-description">
-          <h4>Data Preprocessing System</h4>
-          <p>Automated data cleaning and transformation engine.</p>
-          <a href="#" class="read-more">CHECK IT OUT</a>
-        </div>
+    </section>
+
+    <!-- ==========================================
+                 Portfolio Section
+    =========================================== -->
+<section class="portfolio" id="portfolio">
+  <h2 class="heading">Major <span>Projects</span></h2>
+
+  <div class="portfolio-container">
+    <div class="portfolio-box">
+      <img src="loan.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Loan Default Prediction</h4>
+        <p>A multi-page Streamlit application for
+            predicting loan default risks using machine
+            learning models, featuring model training,
+            analytics, and data exploration.</p>
+        <a href="https://github.com/Nanagyan22/loan-app" class="read-more">CHECK IT OUT</a>
       </div>
     </div>
-    <div class="explore-more-container"><a href="#" class="explore-more-btn">MORE PROJECTS</a></div>
-  </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mnqrbkzd" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <div class="portfolio-box">
+      <img src="klint.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Data Preprocessing System</h4>
+        <p>An AI-powered automated, production-ready,
+            and extensible data preprocessing system
+            designed to clean, prepare, and analyze
+            structured datasets including numeric, categorical,
+            text, date-time, and geospatial data for machine
+            learning and analytics.</p>
+        <a href="https://github.com/Nanagyan22/KlinItAll"class="read-more">CHECK IT OUT</a>
+      </div>
+    </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Francis Afful Gyan | All Rights Reserved</p>
-    <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
-  </footer>
+    <div class="portfolio-box">
+      <img src="banner1.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Predictive Modeling</h4>
+        <p>Developed models for classification
+            and regression tasks, applying techniques
+            like ensemble learning, cross-validation,
+            and hyperparameter tuning to optimize performance.</p>
+        <a href="https://github.com/Nanagyan22"  class="read-more">CHECK IT OUT</a>
+      </div>
+    </div>
 
-  <script>
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('menu-icon');
-    const nav = document.querySelector('header nav');
-    menuBtn.addEventListener('click', () => { nav.classList.toggle('active'); });
+    <div class="portfolio-box">
+      <img src="banner1.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Coming Soon</h4>
+        <p>Coming Soon....!!!</p>
+        <a href="https://github.com/Nanagyan22"  class="read-more">CHECK IT OUT</a>
+      </div>
+    </div>
 
-    // Typed.js
-    new Typed('.multiple-text', {
-      strings: ['Data Scientist','ML Engineer','BI Specialist','Problem Solver'],
-      typeSpeed:80,
-      backSpeed:60,
-      loop:true
-    });
+    <div class="portfolio-box">
+      <img src="banner1.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Coming Soon</h4>
+        <p>Coming Soon....!!!</p>
+        <a href="https://github.com/Nanagyan22"  class="read-more">CHECK IT OUT</a>
+      </div>
+    </div>
 
-    // ScrollReveal animations
-    ScrollReveal().reveal('.home-content, .home-img, .about-img, .about-content, .services-box, .portfolio-box, .contact form', {interval:200, distance:'50px', origin:'bottom', duration:1000});
-  </script>
-</body>
+    <div class="portfolio-box">
+      <img src="banner1.png" alt="portfolio" />
+      <div class="portfolio-description">
+        <h4>Coming Soon</h4>
+        <p>Coming Soon.....!!!</p>
+        <a href="https://github.com/Nanagyan22"  class="read-more">CHECK IT OUT</a>
+      </div>
+    </div>
+  </div>
+
+    <!-- "Explore More Projects" Button -->
+  <div class="explore-more-container">
+    <a href="https://github.com/Nanagyan22" class="explore-more-btn">CHECK OUT MORE PROJECTS</a>
+  </div>
+</section>
+
+
+    <!-- ==========================================
+                    Footer
+    =========================================== -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2025 by Nanagyan | All Rights Reserved.</p>
+      </div>
+
+      <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+
+    <!-- ==========================================
+                  Scroll Reveal
+    =========================================== -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- ==========================================
+                   Typed Js
+    =========================================== -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- ==========================================
+                  Custom Js
+    =========================================== -->
+    <script src="main.js"></script>
+  </body>
 </html>
