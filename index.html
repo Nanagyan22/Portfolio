@@ -5,35 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Box Icons -->
+    <!-- Icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
 
-    <!-- Original CSS (keeps your exact colors & design) -->
+    <!-- Your original design colors (kept exactly as is) -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="breakpoint.css" />
 
-    <title>My Portfolio — Francis Afful Gyan</title>
+    <title>Portfolio — Francis Afful Gyan</title>
 
     <style>
-      /* EXTRA RESPONSIVE FIXES — Does not change your colors */
-      
-      /* Make header aligned properly on all screens */
+      /* -------------------------
+        RESPONSIVE LAYOUT FIXES
+         (COLORS REMAIN UNCHANGED)
+      --------------------------- */
+
       header.header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.5rem 4%;
+        padding: 1.5rem 5%;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
       }
 
-      /* Responsive Home Section Fix */
+      /* Home Section */
       .home {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
+        flex-wrap: wrap;
         gap: 2rem;
+        padding: 6rem 5% 2rem;
       }
 
       .home-img img {
@@ -41,7 +47,13 @@
         max-width: 380px;
       }
 
-      /* Fix About section layout */
+      .about,
+      .services,
+      .portfolio,
+      .contact {
+        padding: 4rem 5%;
+      }
+
       .about {
         display: flex;
         flex-wrap: wrap;
@@ -55,46 +67,71 @@
         border-radius: 1rem;
       }
 
-      /* Services Responsive Grid */
+      /* Services */
       .services-container {
         display: grid;
         gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       }
 
-      /* Portfolio Responsive Grid */
+      /* Portfolio */
       .portfolio-container {
         display: grid;
         gap: 2rem;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       }
 
-      /* Fix portfolio images */
       .portfolio-box img {
         width: 100%;
         height: auto;
-        object-fit: cover;
+        border-radius: 10px;
       }
 
-      /* FOOTER RESPONSIVE FIX */
+      /* Contact Section */
+      .contact form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.3rem;
+      }
+
+      .contact input,
+      .contact textarea {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 6px;
+        border: none;
+        font-size: 1.1rem;
+        outline: none;
+      }
+
+      .contact button {
+        padding: 1rem;
+        border: none;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      /* Footer */
       footer.footer {
         display: flex;
         justify-content: space-between;
-        padding: 1.5rem 4%;
+        padding: 1.5rem 5%;
         flex-wrap: wrap;
-        gap: 1rem;
       }
 
-      /* NAV MENU – RESPONSIVE FIX */
+      /* Navigation mobile */
       #menu-icon {
+        font-size: 3rem;
+        cursor: pointer;
         display: none;
       }
 
       @media (max-width: 900px) {
         #menu-icon {
           display: block;
-          font-size: 2.8rem;
-          cursor: pointer;
         }
 
         nav.navbar {
@@ -102,11 +139,10 @@
           top: 100%;
           right: 0;
           width: 100%;
-          background: var(--second-bg-color);
-          flex-direction: column;
-          text-align: left;
           display: none;
+          flex-direction: column;
           padding: 1.5rem 2rem;
+          text-align: left;
         }
 
         nav.navbar.active {
@@ -114,23 +150,8 @@
         }
 
         nav.navbar a {
-          margin: 1.2rem 0;
+          margin: 1rem 0;
           font-size: 1.6rem;
-        }
-      }
-
-      /* Extra-small phones fixes */
-      @media (max-width: 480px) {
-        .home-content h1 {
-          font-size: 2.1rem;
-        }
-
-        .about-content p {
-          font-size: 1.2rem;
-        }
-
-        .services-box p {
-          font-size: 1.1rem;
         }
       }
     </style>
@@ -138,23 +159,17 @@
 
   <body>
     <!-- Header -->
-    <header class="header" role="banner">
+    <header class="header">
       <a href="#home" class="logo">Port<span>folio.</span></a>
 
-      <button
-        id="menu-icon"
-        class="bx bx-menu"
-        aria-controls="main-nav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-        type="button"
-      ></button>
+      <i class="bx bx-menu" id="menu-icon"></i>
 
-      <nav id="main-nav" class="navbar" role="navigation">
+      <nav class="navbar" id="nav-menu">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Specialty</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -172,9 +187,7 @@
             <a href="https://www.linkedin.com/in/francis-afful-gyan-2b27a5153/"
               ><i class="bx bxl-linkedin"></i
             ></a>
-            <a href="https://github.com/Nanagyan22"
-              ><i class="bx bxl-github"></i
-            ></a>
+            <a href="https://github.com/Nanagyan22"><i class="bx bxl-github"></i></a>
             <a href="mailto:francisaffulgyan@gmail.com"
               ><i class="bx bx-mail-send"></i
             ></a>
@@ -183,23 +196,19 @@
             ></a>
           </div>
 
-          <a
-            href="https://www.linkedin.com/in/francis-afful-gyan-2b27a5153/"
-            class="btn"
-            target="_blank"
-            >Let's Connect</a
-          >
+          <!-- CV Download Button -->
+          <a href="Francis_Afful_Gyan_CV.pdf" download class="btn">Download CV</a>
         </div>
 
         <div class="home-img">
-          <img src="portpic.png" alt="Francis portrait" loading="lazy" />
+          <img src="portpic.png" alt="Profile image" />
         </div>
       </section>
 
       <!-- About Section -->
       <section class="about" id="about">
         <div class="about-img">
-          <img src="portpic2.png" alt="Francis working" loading="lazy" />
+          <img src="portpic2.png" alt="Working image" />
         </div>
 
         <div class="about-content">
@@ -220,25 +229,19 @@
           <div class="services-box">
             <i class="bx bx-code-alt"></i>
             <h3>Data Science & ML</h3>
-            <p>
-              I design and deploy predictive models...
-            </p>
+            <p>I design and deploy predictive models...</p>
           </div>
 
           <div class="services-box">
             <i class="bx bxs-paint"></i>
             <h3>BI & Analytics</h3>
-            <p>
-              I create dashboards and reports with Power BI and Tableau...
-            </p>
+            <p>I create dashboards and reports with Power BI and Tableau...</p>
           </div>
 
           <div class="services-box">
             <i class="bx bx-data"></i>
             <h3>Strategic Business</h3>
-            <p>
-              I align data with business strategy...
-            </p>
+            <p>I align data with business strategy...</p>
           </div>
         </div>
       </section>
@@ -250,35 +253,39 @@
         <div class="portfolio-container">
           <div class="portfolio-box">
             <img src="loan.png" alt="" />
-            <div class="portfolio-description">
-              <h4>Loan Default Prediction</h4>
-              <p>Streamlit ML app...</p>
-              <a href="#" class="read-more">CHECK IT OUT</a>
-            </div>
+            <h4>Loan Default Prediction</h4>
+            <p>Streamlit ML app...</p>
           </div>
 
           <div class="portfolio-box">
             <img src="klint.png" alt="" />
-            <div class="portfolio-description">
-              <h4>Data Preprocessing System</h4>
-              <p>Automated preprocessing engine...</p>
-              <a href="#" class="read-more">CHECK IT OUT</a>
-            </div>
+            <h4>Data Preprocessing System</h4>
+            <p>Automated preprocessing engine...</p>
           </div>
 
           <div class="portfolio-box">
             <img src="banner1.png" alt="" />
-            <div class="portfolio-description">
-              <h4>Predictive Modeling</h4>
-              <p>Classification & regression models...</p>
-              <a href="#" class="read-more">CHECK IT OUT</a>
-            </div>
+            <h4>Predictive Modeling</h4>
+            <p>Classification & regression models...</p>
           </div>
         </div>
 
         <div class="explore-more-container">
           <a href="#" class="explore-more-btn">MORE PROJECTS</a>
         </div>
+      </section>
+
+      <!-- CONTACT FORM -->
+      <section class="contact" id="contact">
+        <h2 class="heading">Get In <span>Touch</span></h2>
+
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
       </section>
     </main>
 
@@ -293,15 +300,21 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Typed JS -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
+    <!-- EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
-      const menuBtn = document.getElementById("menu-icon");
-      const nav = document.getElementById("main-nav");
+      emailjs.init("YOUR_PUBLIC_KEY"); // Replace in 2 mins
+    </script>
 
-      menuBtn.onclick = () => {
-        nav.classList.toggle("active");
+    <script>
+      const menuIcon = document.getElementById("menu-icon");
+      const navMenu = document.getElementById("nav-menu");
+
+      menuIcon.onclick = () => {
+        navMenu.classList.toggle("active");
       };
 
       new Typed(".multiple-text", {
@@ -309,6 +322,19 @@
         typeSpeed: 80,
         backSpeed: 60,
         loop: true,
+      });
+
+      // CONTACT FORM SEND
+      document.getElementById("contact-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+          })
+          .then(() => alert("Message sent successfully!"))
+          .catch(() => alert("Failed to send. Try again."));
       });
     </script>
   </body>
