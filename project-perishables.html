@@ -12,91 +12,177 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="breakpoint.css">
 
-    <!-- Internal CSS for Report Styling -->
+    <!-- Internal CSS for Specific Report Styling -->
     <style>
+        /* --- REPORT CONTAINER STYLES --- */
         .report-section {
             background: var(--second-bg-color);
-            padding: 3rem;
+            padding: 4rem;
             border-radius: 1.5rem;
-            margin-top: 4rem;
+            margin-top: 5rem;
             border: .2rem solid var(--main-color);
+            box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
         }
         
         .report-title {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             color: var(--main-color);
             text-align: center;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid #fff;
-            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .report-meta {
+            text-align: center; 
+            font-style: italic; 
+            margin-bottom: 4rem; 
+            font-size: 1.4rem;
+            color: #aaa;
+            border-bottom: 1px solid #555;
+            padding-bottom: 2rem;
         }
 
         .report-subtitle {
-            font-size: 2rem;
+            font-size: 2.4rem;
             color: var(--text-color);
-            margin-top: 2.5rem;
+            margin-top: 4rem;
             margin-bottom: 1.5rem;
-            font-weight: 600;
+            font-weight: 700;
+            border-left: 5px solid var(--main-color);
+            padding-left: 1.5rem;
         }
 
+        /* --- KPI CARDS --- */
         .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .kpi-card {
             background: var(--bg-color);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 1rem;
             text-align: center;
-            border: 1px solid var(--main-color);
+            border: 1px solid #444;
+            transition: 0.3s;
+        }
+        
+        .kpi-card:hover {
+            border-color: var(--main-color);
+            transform: translateY(-5px);
         }
 
         .kpi-card h4 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #ddd;
         }
 
         .kpi-card span {
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: bold;
             color: var(--main-color);
+        }
+
+        /* --- RESPONSIVE TABLE WRAPPER --- */
+        .table-container {
+            overflow-x: auto; /* Enables horizontal scroll on mobile */
+            margin: 2rem 0;
+            border-radius: 1rem;
+            border: 1px solid #444;
         }
 
         .model-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
-            font-size: 1.4rem;
+            min-width: 600px; /* Forces table to keep shape on mobile */
+            font-size: 1.5rem;
         }
 
         .model-table th, .model-table td {
-            padding: 1rem;
-            border: 1px solid #fff;
+            padding: 1.5rem;
+            border: 1px solid #444;
             text-align: center;
         }
 
         .model-table th {
             background: var(--main-color);
             color: var(--second-bg-color);
+            font-weight: 700;
         }
 
+        .model-table tr:nth-child(even) {
+            background-color: #2b303b;
+        }
+
+        /* --- RECOMMENDATION BOXES --- */
         .recommendation-box {
             background: var(--bg-color);
-            padding: 2rem;
-            border-left: .5rem solid var(--main-color);
-            margin-bottom: 2rem;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            border-left: .8rem solid var(--main-color);
+            margin-bottom: 2.5rem;
         }
 
+        .recommendation-box h4 {
+            /* INCREASED HEADER SIZE AS REQUESTED */
+            font-size: 2rem; 
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.4;
+        }
+
+        .recommendation-metric {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            background: #ffffff10;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            display: inline-block;
+        }
+
+        /* --- TEXT FORMATTING --- */
+        .project-content p {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: #ddd;
+        }
+        
         .feature-list li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 1.2rem;
             list-style: none;
+            font-size: 1.6rem;
         }
         .feature-list li i {
             color: var(--main-color);
             margin-right: 1rem;
+            font-size: 2rem;
+            vertical-align: middle;
+        }
+
+        /* --- MOBILE SPECIFIC ADJUSTMENTS --- */
+        @media (max-width: 768px) {
+            .report-section {
+                padding: 2rem;
+            }
+            
+            /* FORCE LEFT ALIGN ON MOBILE */
+            .project-content p {
+                text-align: left !important; 
+            }
+            
+            .report-title {
+                font-size: 2.4rem;
+            }
+            
+            .recommendation-box h4 {
+                font-size: 1.8rem; /* Still large enough on mobile */
+            }
         }
     </style>
 </head>
@@ -136,8 +222,8 @@
 
         <!-- VIDEO DEMO -->
         <div class="video-wrapper">
+            <!-- Place 'Perishable.mp4' in a 'videos' folder -->
             <video controls poster="Perishable.png">
-                <!-- Make sure Perishable.mp4 is in a 'videos' folder -->
                 <source src="videos/Perishable.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -149,7 +235,7 @@
             <!-- 1. Overview -->
             <h2>Overview</h2>
             <p>
-                FrostMart UK faces a critical challenge — managing perishable goods efficiently. 
+                FrostMart UK faces a critical challenge, managing perishable goods efficiently. 
                 This project delivers an end‑to‑end <strong>machine learning and data‑driven solution</strong> 
                 that predicts weekly product demand, minimizes waste, and empowers procurement teams with 
                 actionable recommendations.
@@ -172,43 +258,47 @@
             <!-- 3. Model Performance -->
             <h2>Model Performance & Evaluation</h2>
             <p>
-                We evaluated multiple algorithms to find the optimal balance between speed and accuracy. 
+                I evaluated multiple algorithms to find the optimal balance between speed and accuracy. 
                 The <strong>Gradient Boosting Regressor (XGBoost)</strong> emerged as the superior model.
             </p>
-            <table class="model-table">
-                <thead>
-                    <tr>
-                        <th>Model</th>
-                        <th>R² Score</th>
-                        <th>RMSE</th>
-                        <th>MAE</th>
-                        <th>MAPE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Linear Regression</td>
-                        <td>0.63</td>
-                        <td>21.5</td>
-                        <td>19.8</td>
-                        <td>5.4%</td>
-                    </tr>
-                    <tr>
-                        <td>Random Forest</td>
-                        <td>0.82</td>
-                        <td>15.3</td>
-                        <td>12.7</td>
-                        <td>3.2%</td>
-                    </tr>
-                    <tr>
-                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>Gradient Boosting</strong></td>
-                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.9959</strong></td>
-                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>75.28</strong></td>
-                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>16.27</strong></td>
-                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.86%</strong></td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <!-- TABLE WRAPPED FOR MOBILE SCROLLING -->
+            <div class="table-container">
+                <table class="model-table">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>R² Score</th>
+                            <th>RMSE</th>
+                            <th>MAE</th>
+                            <th>MAPE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td>0.63</td>
+                            <td>21.5</td>
+                            <td>19.8</td>
+                            <td>5.4%</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest</td>
+                            <td>0.82</td>
+                            <td>15.3</td>
+                            <td>12.7</td>
+                            <td>3.2%</td>
+                        </tr>
+                        <tr>
+                            <td style="background: #323946; border: 2px solid var(--main-color);"><strong>Gradient Boosting</strong></td>
+                            <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.9959</strong></td>
+                            <td style="background: #323946; border: 2px solid var(--main-color);"><strong>75.28</strong></td>
+                            <td style="background: #323946; border: 2px solid var(--main-color);"><strong>16.27</strong></td>
+                            <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.86%</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <!-- 4. Deployment Links -->
             <div class="portfolio-links" style="margin: 3rem 0;">
@@ -224,22 +314,21 @@
             <!-- FULL BUSINESS REPORT SECTION -->
             <!-- =========================================== -->
             <div class="report-section">
-                <h2 class="report-title">FrostMart UK: Business Insights Report</h2>
-                <p style="text-align: center; font-style: italic; margin-bottom: 2rem;">
-                    Prepared by: Francis Afful Gyan | Date: November 2025
-                </p>
+                <h2 class="report-title">FrostMart UK Business Insights Report</h2>
+                <div class="report-meta">
+                    Prepared by: Francis Afful Gyan, Business Intelligence Specialist | 
+                </div>
 
                 <!-- Executive Summary -->
                 <h3 class="report-subtitle">1. Executive Summary</h3>
                 <p>
-                    This report provides a comprehensive analysis of FrostMart UK's operational and financial performance. 
-                    While the company demonstrates robust market presence with an estimated annual revenue of 
-                    <strong>£255.7M</strong>, operational inefficiencies in perishable goods management result in an 
-                    annual loss of <strong>£12.2M</strong>.
+                    This report provides a comprehensive analysis of FrostMart UK's operational performance for the fiscal year 2024-2025, with a primary focus on sales, product wastage, and the evaluation of my newly developed predictive demand forecasting model. 
                 </p>
                 <p>
-                    The implementation of our new predictive model is projected to reduce waste-related losses by 
-                    <strong>30-40%</strong> and unlock a potential revenue uplift of <strong>10-20%</strong>.
+                    My analysis reveals that while FrostMart UK maintains a strong market position with an estimated annual revenue of <strong>£255,716,700.00</strong>, significant financial inefficiencies exist. The most critical issue identified is product wastage, which currently results in an estimated annual loss of <strong>£12,200,000.00</strong>, representing approximately 4.8% of total revenue. The Bakery category and the London region have been identified as the primary contributors to this loss.
+                </p>
+                <p>
+                    In response, I have successfully developed and deployed a machine learning model for demand forecasting, which demonstrates exceptional accuracy with an R-squared value of <strong>0.9959</strong> and a Mean Absolute Percentage Error of just <strong>0.86%</strong>. The implementation of this tool presents a transformative opportunity for FrostMart UK. By leveraging its predictive capabilities, I project a potential reduction in overall wastage by <strong>30% to 40%</strong> and a corresponding revenue uplift of <strong>10% to 20%</strong> through improved stock availability and optimized promotions.
                 </p>
 
                 <!-- Financial KPIs -->
@@ -253,59 +342,90 @@
                         <span style="color: #ff4d4d;">£12.2M</span>
                     </div>
                     <div class="kpi-card">
+                        <h4>Projected Savings</h4>
+                        <span>£4.8M</span>
+                    </div>
+                    <div class="kpi-card">
                         <h4>Model Accuracy</h4>
                         <span>99.6%</span>
                     </div>
-                    <div class="kpi-card">
-                        <h4>Potential Savings</h4>
-                        <span>£4.8M</span>
-                    </div>
                 </div>
 
-                <!-- Product Performance -->
-                <h3 class="report-subtitle">2. Product & Regional Performance</h3>
+                <!-- Financial Performance Analysis -->
+                <h3 class="report-subtitle">2. Financial Performance Analysis</h3>
                 <p>
-                    <strong>Dairy:</strong> Top performer. "Mozzarella 250g" sold over 2.09 million units.<br>
-                    <strong>Bakery:</strong> Highest wastage rate (14.7%). Critical target for intervention.<br>
-                    <strong>Meat:</strong> Highest average price (£7.27). Low volume wastage but high financial impact.<br>
-                    <strong>Beverages:</strong> Longest shelf life (216 days). Optimization focus is on capital efficiency, not spoilage.
+                    A detailed examination of FrostMart UK's financial data highlights a robust revenue stream counterbalanced by significant operational costs, primarily driven by product spoilage and overstocking. The direct financial impact of wastage represents a substantial inefficiency within our supply chain. 
                 </p>
-                
-                <h3 class="report-subtitle">3. Regional Analysis</h3>
                 <p>
-                    <strong>London:</strong> Highest sales volume but disproportionately high wastage. This region is the priority for the rollout of new inventory tools.<br>
-                    <strong>North West & Scotland:</strong> Top-performing regions with lower wastage. Operational best practices from here should be scaled nationwide.
+                    Further analysis into our marketing expenditure reveals areas for optimization. The correlation between marketing spend and sales volume is currently very low at <strong>0.041</strong>, indicating that current marketing strategies are not effectively translating into proportional sales growth. Conversely, my analysis of promotional activities shows a clear and positive impact; a <strong>25% discount</strong> has been proven to generate an average sales uplift of <strong>51.3%</strong>.
+                </p>
+
+                <!-- Product Category Performance -->
+                <h3 class="report-subtitle">3. Product Category Performance</h3>
+                <p>
+                    Analysis at the product category level reveals significant performance disparities:
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Dairy:</strong> Top-performing segment. "Mozzarella 250g" sold over 2.09 million units.</li>
+                    <li><strong>Bakery:</strong> Most problematic, exhibiting the highest wastage rate at <strong>14.7%</strong>. Products like "White Sandwich Loaf" are the largest contributors due to short shelf life.</li>
+                    <li><strong>Meat:</strong> Highest average price per item (£7.27). Wastage here has a disproportionately large financial impact.</li>
+                    <li><strong>Beverages:</strong> Lowest risk profile with an average shelf life of 216.8 days, acting as a logistical buffer.</li>
+                </ul>
+
+                <!-- Regional Sales and Wastage Trends -->
+                <h3 class="report-subtitle">4. Regional Sales and Wastage Trends</h3>
+                <p>
+                    Geographical analysis indicates that the <strong>London region</strong> is the largest contributor to our overall wastage problem despite high sales volume. The high population density and sales velocity are coupled with logistical complexities, resulting in a wastage rate considerably higher than the national average. This makes London the top priority for the rollout of new inventory management tools.
+                </p>
+                <p>
+                    My analysis also incorporated environmental factors. Average temperature and rainfall were identified as significant predictors in my demand model, confirming that weather patterns have a measurable impact on consumer purchasing behavior.
+                </p>
+
+                <!-- Demand Forecasting Model Evaluation -->
+                <h3 class="report-subtitle">5. Demand Forecasting Model Evaluation</h3>
+                <p>
+                    To address the core challenge of product wastage, I developed a sophisticated demand forecasting model. The model achieved an R-squared (R²) value of <strong>0.9959</strong>, indicating it can explain 99.59% of the variability in sales demand. Furthermore, the accuracy is confirmed by a MAPE of <strong>0.86%</strong>.
+                </p>
+                <p>
+                    The most influential predictors identified by the model are, in order of importance: <strong>Shelf Life, Average Temperature, Marketing Spend, Product Category, and Rainfall</strong>.
+                </p>
+
+                <!-- Supply Chain and Inventory Insights -->
+                <h3 class="report-subtitle">6. Supply Chain and Inventory Insights</h3>
+                <p>
+                    The findings confirm that shelf life is the single most important predictor of wastage. For short shelf-life products (Bakery, Produce), a just-in-time replenishment approach is imperative, now feasible due to the model's high accuracy. For long-shelf-life products, we can maintain strategic inventory levels to hedge against supply chain disruptions.
                 </p>
 
                 <!-- Strategic Recommendations -->
-                <h3 class="report-subtitle">4. Strategic Recommendations</h3>
+                <h3 class="report-subtitle">7. Strategic Recommendations</h3>
                 
                 <div class="recommendation-box">
-                    <h4>Recommendation 1: Launch Targeted Wastage Reduction</h4>
-                    <p>Mandatory use of the AI forecasting tool for the Bakery category and all London stores. <br><strong>Target:</strong> Reduce Bakery wastage from 14.7% to <10% in 6 months.</p>
+                    <h4>Implement Dynamic, AI-Guided Replenishment for High-Risk Categories</h4>
+                    <p><strong>Action:</strong> Mandate the use of the new forecasting application for all daily and weekly ordering processes within the Bakery and fresh Meat categories across all stores.</p>
+                    <div class="recommendation-metric">Target: Reduce Bakery wastage from 14.7% to < 9.0% in 6 months.</div>
                 </div>
 
                 <div class="recommendation-box">
-                    <h4>Recommendation 2: Dynamic Pricing System</h4>
-                    <p>Leverage the tool to identify expiring products and auto-suggest a 25% discount. <br><strong>Target:</strong> Increase sell-through rate of near-expiry items by 30%.</p>
+                    <h4>Launch a Targeted Wastage Reduction Initiative in the London Region</h4>
+                    <p><strong>Action:</strong> Establish a pilot program in London to fully integrate the ML forecasting tool with store-level operational workflows.</p>
+                    <div class="recommendation-metric">Target: Decrease London wastage rate by 5% in 1 fiscal year.</div>
                 </div>
 
                 <div class="recommendation-box">
-                    <h4>Recommendation 3: Optimize Marketing Spend</h4>
-                    <p>Reallocate budget based on model-identified ROI periods (e.g., January). <br><strong>Target:</strong> Improve marketing correlation to 0.15 within 12 months.</p>
+                    <h4>Optimize Promotional Strategy and Execution</h4>
+                    <p><strong>Action:</strong> Standardize the use of the 25% discount level for key promotional events, as it has proven to be the most effective at lifting sales.</p>
+                    <div class="recommendation-metric">Target: Increase sales uplift by 10% while reducing post-promo waste.</div>
                 </div>
 
                 <div class="recommendation-box">
-                    <h4>Recommendation 4: Full-Scale AI Adoption</h4>
-                    <p>Comprehensive training for store managers on the Streamlit dashboard. <br><strong>Target:</strong> Achieve 95% adoption rate across all UK stores in 6 months.</p>
+                    <h4>Re-evaluate and Reallocate Marketing Investment</h4>
+                    <p><strong>Action:</strong> Shift a significant portion of the budget towards the first quarter (January to March), which has been identified as the period of highest marketing effectiveness.</p>
+                    <div class="recommendation-metric">Target: Improve marketing efficiency by 20% in 12 months.</div>
                 </div>
 
-                <h3 class="report-subtitle">5. Conclusion</h3>
+                <h3 class="report-subtitle">8. Conclusion</h3>
                 <p>
-                    FrostMart UK is at a pivotal juncture. The annual loss of £12.2M is a formidable challenge 
-                    but also our single greatest opportunity for value creation. By adopting this data-centric 
-                    strategy and deploying the high-accuracy predictive model, FrostMart can transition from 
-                    reactive decision-making to a proactive, intelligent operation, solidifying its competitive advantage.
+                    FrostMart UK is at a pivotal juncture. The annual loss of £12.2M is a clear signal for urgent action. The development and successful validation of my advanced demand forecasting model provides a powerful, data-driven solution. By embracing these changes, I realistically expect to reduce waste by up to 40% and increase revenue by up to 20%. The successful execution of these strategies will not only reclaim millions in lost profit but will also solidify FrostMart UK's position as a technologically advanced leader in the grocery sector.
                 </p>
             </div>
             <!-- End of Report -->
