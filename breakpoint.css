@@ -261,13 +261,15 @@
   /* --- FIX 2: ABOUT ME IMAGE OVERLAP --- */
   .about-img img {
     width: 45vw;
-    margin-top: 0; /* <-- FIX: Was -10rem, caused overlap */
+    /* Removed negative margin so it doesn't overlap */
+    margin-top: 2rem; 
+    margin-bottom: 2rem;
   }
 
   /* --- FIX 1: ABOUT ME TEXT ALIGNMENT --- */
   .about-content p {
     font-size: 1.2rem;
-    text-align: center; /* <-- FIX: Was 'justify', looked bad */
+    text-align: center; /* <-- CHANGED FROM JUSTIFY TO CENTER */
   }
 
   /* ---  Resize Stat Boxes --- */
