@@ -318,7 +318,7 @@ section {
 }
 
 /* ===========================================
-   Portfolio Section (UPDATED)
+   Portfolio Section (UPDATED FOR 16:9 ASPECT RATIO)
    =========================================== */
 .portfolio {
   background: var(--second-bg-color);
@@ -336,29 +336,25 @@ section {
   box-shadow: 0 0 1rem var(--bg-color);
   overflow: hidden;
   background: var(--bg-color);
-  
-  /* CRITICAL: Padding must be 0 so image touches borders */
   padding: 0; 
-  
   display: flex;
   flex-direction: column;
   border: .2rem solid var(--main-color);
 }
 
-/* --- IMAGE STYLES (UPDATED) --- */
+/* --- IMAGE STYLES (THE SAFETY NET) --- */
 .portfolio-box img {
   width: 100%;
-  height: 200px; /* Fixed height for uniformity */
   
-  /* Use 'cover' to fill the space completely. 
-     It might crop slightly, but it guarantees no gaps. */
+  /* Forces every image to be a perfect 16:9 rectangle */
+  aspect-ratio: 16 / 9; 
+  
+  /* Ensures the image covers that space without stretching/distorting */
   object-fit: cover; 
   
   border-radius: 0; 
   margin-bottom: 0;
-  display: block; /* Removes small gap at bottom of inline images */
-  
-  /* Line separating image and text */
+  display: block; 
   border-bottom: .2rem solid var(--main-color); 
 }
 
