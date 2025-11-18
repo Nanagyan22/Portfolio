@@ -20,7 +20,6 @@
   .home-content h1 {
     font-size: 3.5rem;
   }
-  /* 992px is a common breakpoint for grid changes */
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -30,7 +29,6 @@
          Tablet 
 ========================== */
 @media (max-width: 835px) {
-  /* --- PADDING RULE --- */
   section {
     padding: 8rem 9%; 
   }
@@ -73,7 +71,6 @@
     font-size: 20px;
   }
 
-  /* ---  Home Section Layout --- */
   section.home {
     padding-top: 10rem; 
     padding-bottom: 5rem;
@@ -90,7 +87,6 @@
     margin-top: 0; 
     text-align: center;
   }
-
   .home-content .home-intro {
     margin: 1.5rem auto 2.5rem auto;
   }
@@ -144,8 +140,6 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
-
-  /* ENSURE TABLET PROJECTS TOUCH BORDERS */
   .portfolio-box {
     padding: 0 !important;
   }
@@ -194,27 +188,29 @@
   .services-container {
     grid-template-columns: 1fr;
   }
+  
+  /* Report Mobile Padding */
+  .report-section {
+      padding: 2rem;
+  }
+  .project-content p {
+      text-align: left !important;
+  }
 }
 
 /* =========================
          Mobile (UPDATED TEXT SIZES)
 ========================== */
 @media (max-width: 429px) {
-  
-  /* --- STANDARDIZED PADDING --- */
   section {
     padding: 6rem 4%; 
   }
-
-  /* --- 1. STANDARDIZED MAIN HEADINGS --- */
   .heading {
     font-size: 2.6rem; 
   }
-  
   .section-subtitle {
     font-size: 1.3rem;
   }
-
   .logo {
     font-size: 1.8rem;
   }
@@ -222,7 +218,7 @@
     font-size: 2rem;
   }
 
-  /* --- Home Layout --- */
+  /* Home Layout */
   section.home {
     padding-top: 8rem;
   }
@@ -234,7 +230,7 @@
     width: 65vw;
   }
   
-  /* --- 2. HOME TEXT SIZES --- */
+  /* Home Text */
   .home-content h1 {
     font-size: 2.8rem; 
   }
@@ -261,14 +257,12 @@
     padding: 0.8rem 2rem;
   }
 
-  /* --- About Section --- */
+  /* About Section */
   .about-img img {
     width: 45vw;
     margin-top: 2rem; 
     margin-bottom: 2rem;
   }
-  
-  /* --- 3. ABOUT TEXT ALIGNMENT & SIZE --- */
   .about-content h3 {
     font-size: 2rem; 
   }
@@ -277,7 +271,7 @@
     text-align: center; 
   }
 
-  /* --- 4. RESIZED STAT BOXES --- */
+  /* Stat Boxes */
   .stat-box {
     min-width: 0;
     flex-basis: 90px; 
@@ -291,7 +285,7 @@
     font-size: 1.1rem; 
   }
 
-  /* --- 5. SERVICES CARD TEXT --- */
+  /* Services Card */
   .services-box {
     padding: 2rem;
   }
@@ -305,17 +299,14 @@
     font-size: 1.3rem;
   }
 
-  /* --- 6. PORTFOLIO CARD TEXT --- */
+  /* Portfolio Card */
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
-  
-  /* CRITICAL: FORCE PADDING 0 ON MOBILE PROJECT BOX */
   .portfolio-box {
     padding: 0 !important; 
   }
-  
   .portfolio-content {
     padding: 1.5rem; 
   }
@@ -325,8 +316,6 @@
   .portfolio-box p {
     font-size: 1.3rem;
   }
-
-  /* Explore Button */
   .explore-more-btn {
     font-size: 1.4rem;
     padding: 0.8rem 2rem;
@@ -343,7 +332,6 @@
   .contact form textarea {
     height: 20rem;
   }
-  /* Email Text on Mobile */
   .email-link {
     font-size: 1.4rem; 
   }
@@ -351,14 +339,34 @@
   .footer-bottom p {
     font-size: 1rem;
   }
-  /* Footer Name Size */
   .footer-branding h3 {
     font-size: 1.5rem; 
+  }
+
+  /* --- REPORT MOBILE SIZING (Specific Improvements) --- */
+  .report-title {
+      font-size: 2.0rem !important;
+  }
+  .report-subtitle {
+      font-size: 1.6rem !important;
+  }
+  .project-content p, 
+  .report-section p {
+      font-size: 1.3rem !important;
+      text-align: left !important; /* Ensure left align */
+  }
+  .recommendation-box h4 {
+      font-size: 1.5rem !important;
+  }
+  .kpi-card span {
+      font-size: 1.6rem !important;
+  }
+  .feature-list li {
+      font-size: 1.3rem !important;
   }
 }
 
 @media (max-width: 391px) {
-  /* --- SMALL MOBILE ADJUSTMENTS --- */
   section {
     padding: 5rem 4%; 
   }

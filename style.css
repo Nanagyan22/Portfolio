@@ -26,16 +26,12 @@ html {
   font-size: 62.5%; /* 10px */
 }
 
-/* ===========================================
- horizontal overflow 
-=========================================== 
-*/
 html,
 body {
   position: relative;
   background: var(--bg-color);
   color: var(--text-color);
-  overflow-x: hidden; /* Prevents all horizontal scrolling */
+  overflow-x: hidden;
 }
 
 /* ===========================================
@@ -63,7 +59,6 @@ body {
   font-size: 4.5rem;
 }
 
-/* --- NEW REUSABLE SUBTITLE --- */
 .section-subtitle {
   text-align: center;
   font-size: 1.6rem;
@@ -318,7 +313,7 @@ section {
 }
 
 /* ===========================================
-   Portfolio Section (UPDATED FOR SLIDER)
+   Portfolio Section
    =========================================== */
 .portfolio {
   background: var(--second-bg-color);
@@ -342,35 +337,41 @@ section {
   border: .2rem solid var(--main-color);
 }
 
-/* --- NEW IMAGE SLIDER CONTAINER --- */
 .portfolio-img-container {
     width: 100%;
-    /* Forces every image box to be a perfect 16:9 rectangle */
     aspect-ratio: 16 / 9;
     position: relative;
     overflow: hidden;
     border-bottom: .2rem solid var(--main-color);
 }
 
-/* --- SLIDER IMAGES --- */
 .portfolio-img-container img {
     width: 100%;
-    height: 100%; /* Fills the container */
-    object-fit: cover; /* Covers space without gaps */
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0; /* Hide all by default */
+    opacity: 0;
     transition: opacity 1s ease-in-out;
     border-radius: 0;
     margin-bottom: 0;
 }
 
 .portfolio-img-container img.active {
-    opacity: 1; /* Show only the active one */
+    opacity: 1;
 }
 
-/* --- CONTENT WRAPPER --- */
+.portfolio-box img {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  object-fit: cover; 
+  border-radius: 0; 
+  margin-bottom: 0;
+  display: block; 
+  border-bottom: .2rem solid var(--main-color); 
+}
+
 .portfolio-content {
   padding: 2rem; 
   display: flex;
@@ -406,7 +407,7 @@ section {
 .portfolio-links {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap; /* Allows Read More to wrap if needed */
+  flex-wrap: wrap;
 }
 
 .portfolio-links .btn-code,
@@ -674,10 +675,11 @@ section {
 }
 
 /* ===========================================
-   STYLES FOR INDIVIDUAL PROJECT PAGES
+   INDIVIDUAL PROJECT PAGE STYLES
+   (Moved from internal CSS to here)
    =========================================== */
 .project-details {
-    padding: 15rem 9% 5rem; /* Extra padding top for fixed header */
+    padding: 15rem 9% 5rem; 
     min-height: 100vh;
 }
 
@@ -715,7 +717,6 @@ section {
     color: var(--text-color);
 }
 
-/* Video Container (16:9 Aspect Ratio) */
 .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 ratio */
@@ -749,14 +750,139 @@ section {
     color: var(--main-color);
 }
 
-.project-content ul {
-    margin-bottom: 2rem;
-    padding-left: 2rem;
+.feature-list li {
+    margin-bottom: 1.2rem;
+    list-style: none;
+    font-size: 1.6rem;
 }
 
-.project-content ul li {
-    font-size: 1.6rem;
+.feature-list li i {
+    color: var(--main-color);
+    margin-right: 1rem;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+
+/* REPORT STYLES */
+.report-section {
+    background: var(--second-bg-color);
+    padding: 4rem;
+    border-radius: 1.5rem;
+    margin-top: 5rem;
+    border: .2rem solid var(--main-color);
+    box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+}
+
+.report-title {
+    font-size: 3.2rem;
+    color: var(--main-color);
+    text-align: center;
     margin-bottom: 1rem;
-    list-style: disc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.report-meta {
+    text-align: center; 
+    font-style: italic; 
+    margin-bottom: 4rem; 
+    font-size: 1.4rem;
+    color: #aaa;
+    border-bottom: 1px solid #555;
+    padding-bottom: 2rem;
+}
+
+.report-subtitle {
+    font-size: 2.4rem;
     color: var(--text-color);
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    border-left: 5px solid var(--main-color);
+    padding-left: 1.5rem;
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.kpi-card {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #444;
+    transition: 0.3s;
+}
+
+.kpi-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ddd;
+}
+
+.kpi-card span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.table-container {
+    overflow-x: auto; 
+    margin: 2rem 0;
+    border-radius: 1rem;
+    border: 1px solid #444;
+}
+
+.model-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; 
+    font-size: 1.5rem;
+}
+
+.model-table th, .model-table td {
+    padding: 1.5rem;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+.model-table th {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    font-weight: 700;
+}
+
+.model-table tr:nth-child(even) {
+    background-color: #2b303b;
+}
+
+.recommendation-box {
+    background: var(--bg-color);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border-left: .8rem solid var(--main-color);
+    margin-bottom: 2.5rem;
+}
+
+.recommendation-box h4 {
+    font-size: 2rem; 
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.recommendation-metric {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: var(--main-color);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    display: block;
+    font-size: 1.6rem;
+    border: 1px solid var(--main-color);
 }

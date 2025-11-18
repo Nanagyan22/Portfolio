@@ -11,146 +11,6 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="breakpoint.css">
-
-    <!-- Internal CSS for Specific Report Styling -->
-    <style>
-        /* --- REPORT CONTAINER STYLES --- */
-        .report-section {
-            background: var(--second-bg-color);
-            padding: 4rem;
-            border-radius: 1.5rem;
-            margin-top: 5rem;
-            border: .2rem solid var(--main-color);
-            box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
-        }
-        
-        .report-title {
-            font-size: 3.2rem;
-            color: var(--main-color);
-            text-align: center;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .report-meta {
-            text-align: center; 
-            font-style: italic; 
-            margin-bottom: 4rem; 
-            font-size: 1.4rem;
-            color: #aaa;
-            border-bottom: 1px solid #555;
-            padding-bottom: 2rem;
-        }
-
-        .report-subtitle {
-            font-size: 2.4rem;
-            color: var(--text-color);
-            margin-top: 4rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            border-left: 5px solid var(--main-color);
-            padding-left: 1.5rem;
-        }
-
-        /* --- KPI CARDS --- */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .kpi-card {
-            background: var(--bg-color);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            border: 1px solid #444;
-            transition: 0.3s;
-        }
-        
-        .kpi-card:hover {
-            border-color: var(--main-color);
-            transform: translateY(-5px);
-        }
-
-        .kpi-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #ddd;
-        }
-
-        .kpi-card span {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--main-color);
-        }
-
-        /* --- RECOMMENDATION BOXES --- */
-        .recommendation-box {
-            background: var(--bg-color);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            border-left: .8rem solid var(--main-color);
-            margin-bottom: 2.5rem;
-        }
-
-        .recommendation-box h4 {
-            font-size: 2rem; 
-            color: var(--main-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        .recommendation-metric {
-            margin-top: 1.5rem;
-            font-weight: bold;
-            color: var(--main-color);
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            display: block;
-            font-size: 1.6rem;
-            border: 1px solid var(--main-color);
-        }
-
-        /* --- TEXT FORMATTING --- */
-        .project-content p {
-            margin-bottom: 2rem;
-            font-size: 1.6rem;
-            line-height: 1.8;
-            color: #ddd;
-        }
-        
-        .feature-list li {
-            margin-bottom: 1.2rem;
-            list-style: none;
-            font-size: 1.6rem;
-        }
-        .feature-list li i {
-            color: var(--main-color);
-            margin-right: 1rem;
-            font-size: 2rem;
-            vertical-align: middle;
-        }
-
-        /* --- MOBILE SPECIFIC ADJUSTMENTS --- */
-        @media (max-width: 768px) {
-            .report-section {
-                padding: 2rem;
-            }
-            .project-content p {
-                text-align: left !important; 
-            }
-            .report-title {
-                font-size: 2.4rem;
-            }
-            .recommendation-box h4 {
-                font-size: 1.8rem; 
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -201,7 +61,7 @@
             <!-- 1. Overview -->
             <h2>Overview</h2>
             <p>
-                This is a data-driven fitness analytics project combining <strong>Data Science</strong> and <strong>Business Intelligence (BI)</strong> to optimize gym operations, track performance, and provide real-time insights through an AI-powered Power BI chatbot.
+                This is a data driven fitness analytics project combining <strong>Data Science</strong> and <strong>Business Intelligence (BI)</strong> to optimize gym operations, track performance, and provide real time insights through an AI-powered Power BI chatbot.
             </p>
             <p>
                 The system analyzes member trends, trainer performance, and revenue patterns to drive smarter operational decisions for Iron Core Fitness.
@@ -211,9 +71,9 @@
             <h2>Key Goals & Features</h2>
             <ul class="feature-list">
                 <li><i class='bx bx-check-circle'></i> <strong>Interactive Dashboards:</strong> Built with Power BI to visualize KPIs and trends.</li>
-                <li><i class='bx bx-check-circle'></i> <strong>AI Chatbot:</strong> Natural-language Q&A integration for instant business insights (e.g., "Who are the top trainers?").</li>
+                <li><i class='bx bx-check-circle'></i> <strong>AI Chatbot:</strong> Natural language Q&A integration for instant business insights (e.g., "Who are the top trainers?").</li>
                 <li><i class='bx bx-check-circle'></i> <strong>Member Analysis:</strong> Tracking demographics, retention rates, and progress towards fitness goals.</li>
-                <li><i class='bx bx-check-circle'></i> <strong>Financial Tracking:</strong> Real-time monitoring of revenue, expenses, and profit margins.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Financial Tracking:</strong> Real time monitoring of revenue, expenses, and profit margins.</li>
             </ul>
 
             <!-- 4. Deployment Links -->
@@ -238,7 +98,7 @@
                 <!-- Executive Summary -->
                 <h3 class="report-subtitle">1. Executive Summary</h3>
                 <p>
-                    Iron Core Fitness demonstrates strong financial health with a total revenue of <strong>$4.1M</strong> and a net profit of <strong>$2.9M</strong>, resulting in an impressive profit margin of <strong>70.7%</strong>. The facility currently operates with a revenue-to-expense ratio of 3.4:1.
+                    Iron Core Fitness demonstrates strong financial health with a total revenue of <strong>$4.1M</strong> and a net profit of <strong>$2.9M</strong>, resulting in an impressive profit margin of <strong>70.7%</strong>. The facility currently operates with a revenue to expense ratio of 3.4:1.
                 </p>
                 <p>
                     However, opportunities exist to improve member retention (currently 44% active) and optimize trainer workloads to ensure consistent client progress. This report outlines key performance metrics and strategic recommendations to sustain growth.
@@ -285,7 +145,7 @@
                 <!-- Chatbot Capabilities -->
                 <h3 class="report-subtitle">4. AI Chatbot Capabilities</h3>
                 <p>
-                    To democratize data access, I integrated an AI-powered chatbot within the dashboard. Stakeholders can ask natural language questions such as:
+                    To democratize data access, I integrated an AI powered chatbot within the dashboard. Stakeholders can ask natural language questions such as:
                 </p>
                 <ul class="feature-list">
                     <li><i class='bx bx-message-rounded-dots'></i> "Which month had the highest revenue?"</li>
@@ -298,7 +158,7 @@
                 
                 <div class="recommendation-box">
                     <h4>Improve Member Retention Strategies</h4>
-                    <p><strong>Action:</strong> Implement renewal rewards, automated follow-ups for inactive members, and trainer check-ins for at-risk clients.</p>
+                    <p><strong>Action:</strong> Implement renewal rewards, automated follow ups for inactive members, and trainer check-ins for at risk clients.</p>
                     <div class="recommendation-metric">Target: Increase active member rate from 44% to 60%.</div>
                 </div>
 
@@ -310,7 +170,7 @@
 
                 <div class="recommendation-box">
                     <h4>Optimize Trainer Workloads</h4>
-                    <p><strong>Action:</strong> Balance client-to-trainer ratios to ensure quality coaching, as trainer interaction correlates directly with 20% faster client progress.</p>
+                    <p><strong>Action:</strong> Balance client to trainer ratios to ensure quality coaching, as trainer interaction correlates directly with 20% faster client progress.</p>
                     <div class="recommendation-metric">Target: Maintain >80% average client progress rate.</div>
                 </div>
 
@@ -322,7 +182,7 @@
 
                 <h3 class="report-subtitle">6. Conclusion</h3>
                 <p>
-                    Iron Core Fitness is in a strong financial position but faces a challenge with member retention. By leveraging the insights from this BI dashboard—specifically focusing on trainer engagement and retention campaigns—the company can maximize the lifetime value of its members and sustain its impressive profitability.
+                    Iron Core Fitness is in a strong financial position but faces a challenge with member retention. By leveraging the insights from this BI dashboard specifically focusing on trainer engagement and retention campaigns the company can maximize the lifetime value of its members and sustain its impressive profitability.
                 </p>
             </div>
             <!-- End of Report -->

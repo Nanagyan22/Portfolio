@@ -11,182 +11,6 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="breakpoint.css">
-
-    <!-- Internal CSS for Specific Report Styling -->
-    <style>
-        /* --- REPORT CONTAINER STYLES --- */
-        .report-section {
-            background: var(--second-bg-color);
-            padding: 4rem;
-            border-radius: 1.5rem;
-            margin-top: 5rem;
-            border: .2rem solid var(--main-color);
-            box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
-        }
-        
-        .report-title {
-            font-size: 3.2rem;
-            color: var(--main-color);
-            text-align: center;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .report-meta {
-            text-align: center; 
-            font-style: italic; 
-            margin-bottom: 4rem; 
-            font-size: 1.4rem;
-            color: #aaa;
-            border-bottom: 1px solid #555;
-            padding-bottom: 2rem;
-        }
-
-        .report-subtitle {
-            font-size: 2.4rem;
-            color: var(--text-color);
-            margin-top: 4rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            border-left: 5px solid var(--main-color);
-            padding-left: 1.5rem;
-        }
-
-        /* --- KPI CARDS --- */
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .kpi-card {
-            background: var(--bg-color);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            border: 1px solid #444;
-            transition: 0.3s;
-        }
-        
-        .kpi-card:hover {
-            border-color: var(--main-color);
-            transform: translateY(-5px);
-        }
-
-        .kpi-card h4 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #ddd;
-        }
-
-        .kpi-card span {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--main-color);
-        }
-
-        /* --- RESPONSIVE TABLE WRAPPER --- */
-        .table-container {
-            overflow-x: auto; /* Enables horizontal scroll on mobile */
-            margin: 2rem 0;
-            border-radius: 1rem;
-            border: 1px solid #444;
-        }
-
-        .model-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 600px; /* Forces table to keep shape on mobile */
-            font-size: 1.5rem;
-        }
-
-        .model-table th, .model-table td {
-            padding: 1.5rem;
-            border: 1px solid #444;
-            text-align: center;
-        }
-
-        .model-table th {
-            background: var(--main-color);
-            color: var(--second-bg-color);
-            font-weight: 700;
-        }
-
-        .model-table tr:nth-child(even) {
-            background-color: #2b303b;
-        }
-
-        /* --- RECOMMENDATION BOXES --- */
-        .recommendation-box {
-            background: var(--bg-color);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            border-left: .8rem solid var(--main-color);
-            margin-bottom: 2.5rem;
-        }
-
-        .recommendation-box h4 {
-            font-size: 2rem; 
-            color: var(--main-color);
-            margin-bottom: 1.5rem;
-            line-height: 1.4;
-        }
-
-        /* --- UPDATED METRIC BOX STYLE --- */
-        .recommendation-metric {
-            margin-top: 1.5rem;
-            font-weight: bold;
-            color: var(--main-color); /* Changed to Main Color for visibility */
-            background: rgba(255, 255, 255, 0.05);
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            display: block; /* Takes full width */
-            font-size: 1.6rem; /* Explicitly larger size */
-            border: 1px solid var(--main-color); /* Added border to pop */
-        }
-
-        /* --- TEXT FORMATTING --- */
-        .project-content p {
-            margin-bottom: 2rem;
-            font-size: 1.6rem;
-            line-height: 1.8;
-            color: #ddd;
-        }
-        
-        .feature-list li {
-            margin-bottom: 1.2rem;
-            list-style: none;
-            font-size: 1.6rem;
-        }
-        .feature-list li i {
-            color: var(--main-color);
-            margin-right: 1rem;
-            font-size: 2rem;
-            vertical-align: middle;
-        }
-
-        /* --- MOBILE SPECIFIC ADJUSTMENTS --- */
-        @media (max-width: 768px) {
-            .report-section {
-                padding: 2rem;
-            }
-            
-            /* FORCE LEFT ALIGN ON MOBILE */
-            .project-content p {
-                text-align: left !important; 
-            }
-            
-            .report-title {
-                font-size: 2.4rem;
-            }
-            
-            .recommendation-box h4 {
-                font-size: 1.8rem; 
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -237,7 +61,7 @@
             <!-- 1. Overview -->
             <h2>Overview</h2>
             <p>
-                FrostMart UK faces a critical challenge, managing perishable goods efficiently. 
+                FrostMart UK faces a critical challenge — managing perishable goods efficiently. 
                 This project delivers an end‑to‑end <strong>machine learning and data‑driven solution</strong> 
                 that predicts weekly product demand, minimizes waste, and empowers procurement teams with 
                 actionable recommendations.
@@ -318,7 +142,7 @@
             <div class="report-section">
                 <h2 class="report-title">FrostMart UK Business Insights Report</h2>
                 <div class="report-meta">
-                    Prepared by: Francis Afful Gyan, Business Intelligence Specialist 
+                    Prepared by: Francis Afful Gyan, Business Intelligence Specialist | Date: November 2025
                 </div>
 
                 <!-- Executive Summary -->
@@ -368,7 +192,7 @@
                     Analysis at the product category level reveals significant performance disparities:
                 </p>
                 <ul class="feature-list">
-                    <li><strong>Dairy:</strong> Top performing segment. "Mozzarella 250g" sold over 2.09 million units.</li>
+                    <li><strong>Dairy:</strong> Top-performing segment. "Mozzarella 250g" sold over 2.09 million units.</li>
                     <li><strong>Bakery:</strong> Most problematic, exhibiting the highest wastage rate at <strong>14.7%</strong>. Products like "White Sandwich Loaf" are the largest contributors due to short shelf life.</li>
                     <li><strong>Meat:</strong> Highest average price per item (£7.27). Wastage here has a disproportionately large financial impact.</li>
                     <li><strong>Beverages:</strong> Lowest risk profile with an average shelf life of 216.8 days, acting as a logistical buffer.</li>
@@ -402,14 +226,14 @@
                 <h3 class="report-subtitle">7. Strategic Recommendations</h3>
                 
                 <div class="recommendation-box">
-                    <h4>Implement Dynamic, ML-Guided Replenishment for High-Risk Categories</h4>
-                    <p><strong>Action:</strong> Mandate the use of the new ML forecasting application for all daily and weekly ordering processes within the Bakery and fresh Meat categories across all stores.</p>
+                    <h4>Implement Dynamic, AI-Guided Replenishment for High-Risk Categories</h4>
+                    <p><strong>Action:</strong> Mandate the use of the new Streamlit forecasting application for all daily and weekly ordering processes within the Bakery and fresh Meat categories across all stores.</p>
                     <div class="recommendation-metric">Target: Reduce Bakery wastage from 14.7% to < 9.0% in 6 months.</div>
                 </div>
 
                 <div class="recommendation-box">
                     <h4>Launch a Targeted Wastage Reduction Initiative in the London Region</h4>
-                    <p><strong>Action:</strong> Establish a pilot program in London to fully integrate the forecasting tool with store-level operational workflows.</p>
+                    <p><strong>Action:</strong> Establish a pilot program in London to fully integrate the AI forecasting tool with store-level operational workflows.</p>
                     <div class="recommendation-metric">Target: Decrease London wastage rate by 5% in 1 fiscal year.</div>
                 </div>
 
