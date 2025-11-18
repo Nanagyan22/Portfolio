@@ -30,6 +30,11 @@
          Tablet 
 ========================== */
 @media (max-width: 835px) {
+  /* --- NEW PADDING RULE --- */
+  section {
+    padding: 8rem 9%; /* Reduces top/bottom padding for tablets */
+  }
+
   .logo {
     font-size: 2.5rem;
   }
@@ -198,6 +203,11 @@
          Mobile 
 ========================== */
 @media (max-width: 429px) {
+  /* --- NEW PADDING RULE --- */
+  section {
+    padding: 6rem 9%; /* Reduces top/bottom padding for mobile */
+  }
+
   /* ---  Reduce heading sizes --- */
   .heading {
     font-size: 3.2rem;
@@ -305,6 +315,11 @@
   }
 }
 @media (max-width: 391px) {
+  /* --- NEW PADDING RULE --- */
+  section {
+    padding: 5rem 9%; /* Reduces top/bottom padding for small mobile */
+  }
+
   .home-content h1 {
     line-height: 2;
   }

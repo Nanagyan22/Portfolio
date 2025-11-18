@@ -76,8 +76,8 @@ span {
 }
 
 section {
-  min-height: 100vh;
-  padding: 10rem 9% 2rem;
+  /* min-height: 100vh;  <-- REMOVED */
+  padding: 10rem 9%; /* 10rem top/bottom, 9% left/right */
 }
 
 /* ===========================================
@@ -137,6 +137,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh; /* <-- ADD THIS LINE BACK */
 }
 
 .home-img img {
