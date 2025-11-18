@@ -30,9 +30,9 @@
          Tablet 
 ========================== */
 @media (max-width: 835px) {
-  /* --- NEW PADDING RULE --- */
+  /* --- PADDING RULE --- */
   section {
-    padding: 8rem 9%; /* Reduces top/bottom padding for tablets */
+    padding: 8rem 9%; 
   }
 
   .logo {
@@ -41,7 +41,6 @@
 
   #menu-icon {
     display: block;
-    /* margin-left: 43rem; <-- DELETED. Fixes overflow. */
     font-size: 2.5rem;
   }
   .navbar {
@@ -76,7 +75,7 @@
 
   /* ---  Home Section Layout --- */
   section.home {
-    padding-top: 10rem; /* Add padding for header */
+    padding-top: 10rem; 
     padding-bottom: 5rem;
   }
   .home {
@@ -85,10 +84,10 @@
   }
   .home-img img {
     width: 55vw;
-    margin: 0 auto; /* Center image, remove bad margins */
+    margin: 0 auto; 
   }
   .home-content {
-    margin-top: 0; /* Remove negative margin */
+    margin-top: 0; 
     text-align: center;
   }
 
@@ -103,12 +102,11 @@
     font-size: 3rem;
   }
   .social-media a {
-    /* Smaller Social Icons (Tablet) */
-    width: 4.5rem; /* Was 8.5rem */
-    height: 4.5rem; /* Was 8.5rem */
+    width: 4.5rem; 
+    height: 4.5rem; 
     margin-left: 1rem;
     margin-bottom: 2.5rem;
-    font-size: 2.2rem; /* Was 3.5rem */
+    font-size: 2.2rem; 
   }
   .btn {
     margin-top: 1.5rem;
@@ -133,9 +131,8 @@
     font-size: 1.3rem;
   }
 
-  /* --- UPDATED Services --- */
   .services-container {
-    grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 2rem;
   }
   .services-box p,
@@ -143,7 +140,6 @@
     font-size: 1.3rem;
   }
 
-  /* UPDATED Portfolio */
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
@@ -163,7 +159,6 @@
     height: 30rem;
   }
 
-  /* ---Footer Responsive Styles */
   .footer-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     text-align: center;
@@ -178,9 +173,6 @@
 }
 
 @media (max-width: 769px) {
-  #menu-icon {
-    /* margin-left: 35rem; <-- DELETED. Fixes overflow. */
-  }
   .home-img img {
     width: 50vw;
   }
@@ -200,145 +192,174 @@
 }
 
 /* =========================
-         Mobile 
+         Mobile (UPDATED TEXT SIZES)
 ========================== */
 @media (max-width: 429px) {
-  /* --- NEW PADDING RULE --- */
+  
+  /* --- STANDARDIZED PADDING --- */
   section {
-    padding: 6rem 4%; /* Reduces top/bottom padding for mobile */
+    padding: 6rem 4%; 
   }
 
-  /* ---  Reduce heading sizes --- */
+  /* --- 1. STANDARDIZED MAIN HEADINGS --- */
   .heading {
-    font-size: 3.2rem;
+    font-size: 2.6rem; 
+  }
+  
+  .section-subtitle {
+    font-size: 1.3rem;
   }
 
   .logo {
     font-size: 1.8rem;
   }
   #menu-icon {
-    /* margin-left: -30rem; <-- DELETED. Fixes overflow. */
     font-size: 2rem;
   }
 
-  /* --- Home layout mobile --- */
+  /* --- Home Layout --- */
   section.home {
     padding-top: 8rem;
   }
   .home-img {
-    margin-top: 4rem; /* Was 8rem */
-    margin-right: 0; /* Was -3.5rem */
+    margin-top: 4rem; 
+    margin-right: 0; 
   }
-
   .home-img img {
     width: 65vw;
   }
+  
+  /* --- 2. HOME TEXT SIZES --- */
   .home-content h1 {
-    font-size: 2rem;
+    font-size: 2.8rem; 
   }
   .home-content h3 {
-    font-size: 1.6rem;
+    font-size: 1.6rem; 
   }
   .home-content .home-intro {
-    font-size: 1.1rem;
+    font-size: 1.4rem; 
     max-width: 100%;
   }
+
   .social-media {
     margin-left: 1rem;
     margin-bottom: -1rem;
   }
   .social-media a {
-    /* Smaller Social Icons (Mobile) */
-    width: 3.2rem; /* Was 3.5rem */
-    height: 3.2rem; /* Was 3.5rem */
+    width: 3.2rem; 
+    height: 3.2rem; 
     margin-left: 0.8rem;
-    font-size: 1.8rem; /* Was 2rem */
+    font-size: 1.8rem; 
   }
   .btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem; 
+    padding: 0.8rem 2rem;
   }
 
-  /* --- FIX 2: ABOUT ME IMAGE OVERLAP --- */
+  /* --- About Section --- */
   .about-img img {
     width: 45vw;
-    /* Removed negative margin so it doesn't overlap */
     margin-top: 2rem; 
     margin-bottom: 2rem;
   }
-
-  /* --- FIX 1: ABOUT ME TEXT ALIGNMENT --- */
+  
+  /* --- 3. ABOUT TEXT ALIGNMENT & SIZE --- */
+  .about-content h3 {
+    font-size: 2rem; 
+  }
   .about-content p {
-    font-size: 1.2rem;
-    text-align: center; /* <-- CHANGED FROM JUSTIFY TO CENTER */
+    font-size: 1.35rem; 
+    text-align: center; 
   }
 
-  /* ---  Resize Stat Boxes --- */
+  /* --- 4. RESIZED STAT BOXES --- */
   .stat-box {
     min-width: 0;
-    flex-basis: 100px; /* Give a base width */
-    flex-grow: 1; /* Allow them to grow */
+    flex-basis: 90px; 
+    flex-grow: 1; 
+    padding: 1rem;
   }
   .stat-box h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem; 
   }
   .stat-box p {
-    font-size: 1.2rem;
+    font-size: 1.1rem; 
   }
 
+  /* --- 5. SERVICES CARD TEXT --- */
+  .services-box {
+    padding: 2rem;
+  }
+  .services-box h3 {
+    font-size: 1.8rem; 
+  }
   .services-box p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .services-box li {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
+  /* --- 6. PORTFOLIO CARD TEXT --- */
   .portfolio-container {
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
   .portfolio-box {
-    padding: 1.5rem 2rem;
+    /* FIX: Ensure 0 padding on mobile for image to touch borders */
+    padding: 0 !important; 
   }
-  
   .portfolio-content {
-    padding: 1.5rem; /* Reduced padding for mobile text */
+    padding: 1.5rem; 
+  }
+  .portfolio-box h4 {
+    font-size: 1.8rem; 
+  }
+  .portfolio-box p {
+    font-size: 1.3rem;
   }
 
-  /* ---  Resize 'Check Out More' button --- */
+  /* Explore Button */
   .explore-more-btn {
     font-size: 1.4rem;
     padding: 0.8rem 2rem;
   }
 
+  /* Contact Form */
+  .contact-container {
+    padding: 1.5rem;
+  }
   .contact form .input-box input,
   .contact form textarea {
-    font-size: 1rem;
+    font-size: 1.4rem; 
   }
   .contact form textarea {
     height: 20rem;
   }
-  
-  .contact-container {
-      padding: 1.5rem; /* Less padding on mobile contact box */
+  /* Email Text on Mobile */
+  .email-link {
+    font-size: 1.4rem; 
   }
 
   .footer-bottom p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
-
-  /* FIX: Reduce footer name size so it stays on one line */
+  /* Footer Name Size */
   .footer-branding h3 {
     font-size: 1.5rem; 
   }
 }
-@media (max-width: 391px) {
-  /* --- NEW PADDING RULE --- */
-  section {
-    padding: 5rem 4%; /* Reduces top/bottom padding for small mobile */
-  }
 
+@media (max-width: 391px) {
+  /* --- SMALL MOBILE ADJUSTMENTS --- */
+  section {
+    padding: 5rem 4%; 
+  }
+  .heading {
+    font-size: 2.4rem; 
+  }
   .home-content h1 {
-    line-height: 2;
+    font-size: 2.4rem;
   }
   .home-content h3 {
     font-size: 1.4rem;
@@ -357,7 +378,6 @@
     margin-top: 1.3rem;
     font-size: 1.2rem;
   }
-
   .footer-bottom p {
     font-size: 0.8rem;
   }
