@@ -4,10 +4,12 @@
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
-menuIcon.onclick = () => {
-  menuIcon.classList.toggle("bx-x");
-  navbar.classList.toggle("active");
-};
+if (menuIcon) {
+    menuIcon.onclick = () => {
+      menuIcon.classList.toggle("bx-x");
+      navbar.classList.toggle("active");
+    };
+}
 
 /* =========================== 
     Scroll Section Active Link 
@@ -25,9 +27,11 @@ window.onscroll = () => {
     if (top >= offset && top < offset + height) {
       navLinks.forEach((links) => {
         links.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
+        // Only try to select if the element exists
+        let activeLink = document.querySelector("header nav a[href*=" + id + "]");
+        if(activeLink) {
+            activeLink.classList.add("active");
+        }
       });
     }
   });
@@ -41,15 +45,17 @@ window.onscroll = () => {
   /* ===================== 
     Menu Icon Navbar 
 ====================== */
-  menuIcon.classList.remove("bx-x");
-  navbar.classList.remove("active");
+  if (menuIcon) {
+    menuIcon.classList.remove("bx-x");
+    navbar.classList.remove("active");
+  }
 };
 
 /* ===================== 
     Scroll Reveal 
 ====================== */
 ScrollReveal({
-  // reset: true, // You had this as 'true', which makes animations re-run. I've commented it out, but you can re-enable it.
+  // reset: true, // Commented out to prevent animations from re-running
   distance: "80px",
   duration: 2000,
   delay: 200,
@@ -66,27 +72,29 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 /* ===================== 
     Typed Js 
 ====================== */
-const typed = new Typed(".multiple-text", {
-  strings: [
-    "Data Scientist",
-    "Business Strategist",
-    "Data Analyst",
-    "Business Intelligence Analyst",
-  ],
-  typeSpeed: 100,
-  backSpeed: 100,
-  backDelay: 1000,
-  loop: true,
-});
+// Check if element exists before initializing typed.js
+if(document.querySelector(".multiple-text")){
+    const typed = new Typed(".multiple-text", {
+      strings: [
+        "Data Scientist",
+        "Business Strategist",
+        "Data Analyst",
+        "Business Intelligence Analyst",
+      ],
+      typeSpeed: 100,
+      backSpeed: 100,
+      backDelay: 1000,
+      loop: true,
+    });
+}
 
 /* ===========================================
    NEW: CONTACT FORM 
    =========================================== */
-// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
   const formMessage = document.getElementById("form-message");
-  const submitButton = contactForm.querySelector('input[type="submit"]');
+  const submitButton = contactForm ? contactForm.querySelector('input[type="submit"]') : null;
 
   if (contactForm) {
     contactForm.addEventListener("submit", async (e) => {
@@ -117,13 +125,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (response.ok) {
-          // 5. Handle success (THIS SHOWS THE "SENT" MESSAGE)
+          // 5. Handle success
           formMessage.textContent =
             "Message sent! I'll get back to you soon.";
           formMessage.className = "form-message success";
           contactForm.reset(); // Clear the form
         } else {
-          // 6. Handle errors from the server (THIS SHOWS THE "ERROR" MESSAGE)
+          // 6. Handle errors from the server
           const errorData = await response.json();
           formMessage.textContent = `Error: ${
             errorData.error || "Failed to send message."
@@ -143,4 +151,29 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* ===========================================
+   PROJECT IMAGE AUTO-SLIDER
+   =========================================== */
+   const sliders = document.querySelectorAll('.portfolio-img-container');
+
+   sliders.forEach(slider => {
+       const images = slider.querySelectorAll('img');
+       let currentIndex = 0;
+
+       // Only start slider if there is more than 1 image
+       if(images.length > 1) {
+           setInterval(() => {
+               // Remove active class from current image
+               images[currentIndex].classList.remove('active');
+
+               // Calculate next index
+               currentIndex = (currentIndex + 1) % images.length;
+
+               // Add active class to next image
+               images[currentIndex].classList.add('active');
+           }, 3000); // Change image every 3000ms (3 seconds)
+       }
+   });
+
 });

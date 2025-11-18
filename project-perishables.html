@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perishable Demand Predictor - Francis Afful Gyan</title>
+    
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="breakpoint.css">
+
+    <!-- Internal CSS for Report Styling -->
+    <style>
+        .report-section {
+            background: var(--second-bg-color);
+            padding: 3rem;
+            border-radius: 1.5rem;
+            margin-top: 4rem;
+            border: .2rem solid var(--main-color);
+        }
+        
+        .report-title {
+            font-size: 2.8rem;
+            color: var(--main-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #fff;
+            padding-bottom: 1rem;
+        }
+
+        .report-subtitle {
+            font-size: 2rem;
+            color: var(--text-color);
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .kpi-card {
+            background: var(--bg-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 1px solid var(--main-color);
+        }
+
+        .kpi-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-card span {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--main-color);
+        }
+
+        .model-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            font-size: 1.4rem;
+        }
+
+        .model-table th, .model-table td {
+            padding: 1rem;
+            border: 1px solid #fff;
+            text-align: center;
+        }
+
+        .model-table th {
+            background: var(--main-color);
+            color: var(--second-bg-color);
+        }
+
+        .recommendation-box {
+            background: var(--bg-color);
+            padding: 2rem;
+            border-left: .5rem solid var(--main-color);
+            margin-bottom: 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            list-style: none;
+        }
+        .feature-list li i {
+            color: var(--main-color);
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">Port<span>folio.</span></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        
+        <!-- Navigation Back -->
+        <a href="index.html#portfolio" class="back-btn">
+            <i class='bx bx-left-arrow-alt'></i> Back to Projects
+        </a>
+
+        <!-- Title Area -->
+        <div class="project-header">
+            <h1 class="heading" style="text-align: left;">Perishable Demand Predictor</h1>
+            <div class="project-meta">
+                <span>Python</span>
+                <span>XGBoost</span>
+                <span>Streamlit</span>
+                <span>Google Gemini AI</span>
+                <span>Business Intelligence</span>
+            </div>
+        </div>
+
+        <!-- VIDEO DEMO -->
+        <div class="video-wrapper">
+            <video controls poster="Perishable.png">
+                <!-- Make sure Perishable.mp4 is in a 'videos' folder -->
+                <source src="videos/Perishable.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-content">
+            
+            <!-- 1. Overview -->
+            <h2>Overview</h2>
+            <p>
+                FrostMart UK faces a critical challenge — managing perishable goods efficiently. 
+                This project delivers an end‑to‑end <strong>machine learning and data‑driven solution</strong> 
+                that predicts weekly product demand, minimizes waste, and empowers procurement teams with 
+                actionable recommendations.
+            </p>
+            <p>
+                <strong>The Core Problem:</strong> An estimated annual financial loss of <strong>£12.2M</strong> 
+                due to product wastage and overstocking, representing approximately 4.77% of total revenue.
+            </p>
+            
+            <!-- 2. Key Features -->
+            <h2>Key Features</h2>
+            <ul class="feature-list">
+                <li><i class='bx bx-check-circle'></i> <strong>XGBoost Regressor:</strong> High-accuracy demand forecasting (R² 0.9959).</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Interactive Dashboard:</strong> Streamlit app with tabs for single product, batch, and model insights.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>AI Chat Assistant:</strong> Integrated Google Gemini chatbot for querying sales and wastage data.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Automated Procurement:</strong> Human-readable order recommendations with buffer suggestions.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Batch Processing:</strong> Capability to upload CSVs for bulk forecasting.</li>
+            </ul>
+
+            <!-- 3. Model Performance -->
+            <h2>Model Performance & Evaluation</h2>
+            <p>
+                We evaluated multiple algorithms to find the optimal balance between speed and accuracy. 
+                The <strong>Gradient Boosting Regressor (XGBoost)</strong> emerged as the superior model.
+            </p>
+            <table class="model-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>R² Score</th>
+                        <th>RMSE</th>
+                        <th>MAE</th>
+                        <th>MAPE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Linear Regression</td>
+                        <td>0.63</td>
+                        <td>21.5</td>
+                        <td>19.8</td>
+                        <td>5.4%</td>
+                    </tr>
+                    <tr>
+                        <td>Random Forest</td>
+                        <td>0.82</td>
+                        <td>15.3</td>
+                        <td>12.7</td>
+                        <td>3.2%</td>
+                    </tr>
+                    <tr>
+                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>Gradient Boosting</strong></td>
+                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.9959</strong></td>
+                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>75.28</strong></td>
+                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>16.27</strong></td>
+                        <td style="background: #323946; border: 2px solid var(--main-color);"><strong>0.86%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 4. Deployment Links -->
+            <div class="portfolio-links" style="margin: 3rem 0;">
+                <a href="https://github.com/Nanagyan22/Predicting_Perishables-" target="_blank" class="btn-code">
+                    <i class='bx bxl-github'></i> View Source Code
+                </a>
+                <a href="https://perishables.streamlit.app" target="_blank" class="btn-demo">
+                    <i class='bx bx-laptop'></i> Live Demo App
+                </a>
+            </div>
+
+            <!-- =========================================== -->
+            <!-- FULL BUSINESS REPORT SECTION -->
+            <!-- =========================================== -->
+            <div class="report-section">
+                <h2 class="report-title">FrostMart UK: Business Insights Report</h2>
+                <p style="text-align: center; font-style: italic; margin-bottom: 2rem;">
+                    Prepared by: Francis Afful Gyan | Date: November 2025
+                </p>
+
+                <!-- Executive Summary -->
+                <h3 class="report-subtitle">1. Executive Summary</h3>
+                <p>
+                    This report provides a comprehensive analysis of FrostMart UK's operational and financial performance. 
+                    While the company demonstrates robust market presence with an estimated annual revenue of 
+                    <strong>£255.7M</strong>, operational inefficiencies in perishable goods management result in an 
+                    annual loss of <strong>£12.2M</strong>.
+                </p>
+                <p>
+                    The implementation of our new predictive model is projected to reduce waste-related losses by 
+                    <strong>30-40%</strong> and unlock a potential revenue uplift of <strong>10-20%</strong>.
+                </p>
+
+                <!-- Financial KPIs -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h4>Annual Revenue</h4>
+                        <span>£255.7M</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Annual Loss (Waste)</h4>
+                        <span style="color: #ff4d4d;">£12.2M</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Model Accuracy</h4>
+                        <span>99.6%</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Potential Savings</h4>
+                        <span>£4.8M</span>
+                    </div>
+                </div>
+
+                <!-- Product Performance -->
+                <h3 class="report-subtitle">2. Product & Regional Performance</h3>
+                <p>
+                    <strong>Dairy:</strong> Top performer. "Mozzarella 250g" sold over 2.09 million units.<br>
+                    <strong>Bakery:</strong> Highest wastage rate (14.7%). Critical target for intervention.<br>
+                    <strong>Meat:</strong> Highest average price (£7.27). Low volume wastage but high financial impact.<br>
+                    <strong>Beverages:</strong> Longest shelf life (216 days). Optimization focus is on capital efficiency, not spoilage.
+                </p>
+                
+                <h3 class="report-subtitle">3. Regional Analysis</h3>
+                <p>
+                    <strong>London:</strong> Highest sales volume but disproportionately high wastage. This region is the priority for the rollout of new inventory tools.<br>
+                    <strong>North West & Scotland:</strong> Top-performing regions with lower wastage. Operational best practices from here should be scaled nationwide.
+                </p>
+
+                <!-- Strategic Recommendations -->
+                <h3 class="report-subtitle">4. Strategic Recommendations</h3>
+                
+                <div class="recommendation-box">
+                    <h4>Recommendation 1: Launch Targeted Wastage Reduction</h4>
+                    <p>Mandatory use of the AI forecasting tool for the Bakery category and all London stores. <br><strong>Target:</strong> Reduce Bakery wastage from 14.7% to <10% in 6 months.</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>Recommendation 2: Dynamic Pricing System</h4>
+                    <p>Leverage the tool to identify expiring products and auto-suggest a 25% discount. <br><strong>Target:</strong> Increase sell-through rate of near-expiry items by 30%.</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>Recommendation 3: Optimize Marketing Spend</h4>
+                    <p>Reallocate budget based on model-identified ROI periods (e.g., January). <br><strong>Target:</strong> Improve marketing correlation to 0.15 within 12 months.</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>Recommendation 4: Full-Scale AI Adoption</h4>
+                    <p>Comprehensive training for store managers on the Streamlit dashboard. <br><strong>Target:</strong> Achieve 95% adoption rate across all UK stores in 6 months.</p>
+                </div>
+
+                <h3 class="report-subtitle">5. Conclusion</h3>
+                <p>
+                    FrostMart UK is at a pivotal juncture. The annual loss of £12.2M is a formidable challenge 
+                    but also our single greatest opportunity for value creation. By adopting this data-centric 
+                    strategy and deploying the high-accuracy predictive model, FrostMart can transition from 
+                    reactive decision-making to a proactive, intelligent operation, solidifying its competitive advantage.
+                </p>
+            </div>
+            <!-- End of Report -->
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 Francis Afful Gyan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>
