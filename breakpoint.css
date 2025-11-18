@@ -258,14 +258,16 @@
     font-size: 1.5rem;
   }
 
+  /* --- FIX 2: ABOUT ME IMAGE OVERLAP --- */
   .about-img img {
     width: 45vw;
-    margin-top: -10rem;
+    margin-top: 0; /* <-- FIX: Was -10rem, caused overlap */
   }
-  /* --- Justify and resize About Me text --- */
+
+  /* --- FIX 1: ABOUT ME TEXT ALIGNMENT --- */
   .about-content p {
     font-size: 1.2rem;
-    text-align: justify;
+    text-align: center; /* <-- FIX: Was 'justify', looked bad */
   }
 
   /* ---  Resize Stat Boxes --- */
