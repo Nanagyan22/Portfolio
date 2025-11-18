@@ -128,21 +128,23 @@
         }
 
         .recommendation-box h4 {
-            /* INCREASED HEADER SIZE AS REQUESTED */
             font-size: 2rem; 
             color: var(--main-color);
             margin-bottom: 1.5rem;
             line-height: 1.4;
         }
 
+        /* --- UPDATED METRIC BOX STYLE --- */
         .recommendation-metric {
             margin-top: 1.5rem;
             font-weight: bold;
-            color: #fff;
-            background: #ffffff10;
-            padding: 1rem;
+            color: var(--main-color); /* Changed to Main Color for visibility */
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
             border-radius: 0.5rem;
-            display: inline-block;
+            display: block; /* Takes full width */
+            font-size: 1.6rem; /* Explicitly larger size */
+            border: 1px solid var(--main-color); /* Added border to pop */
         }
 
         /* --- TEXT FORMATTING --- */
@@ -181,7 +183,7 @@
             }
             
             .recommendation-box h4 {
-                font-size: 1.8rem; /* Still large enough on mobile */
+                font-size: 1.8rem; 
             }
         }
     </style>
@@ -316,7 +318,7 @@
             <div class="report-section">
                 <h2 class="report-title">FrostMart UK Business Insights Report</h2>
                 <div class="report-meta">
-                    Prepared by: Francis Afful Gyan, Business Intelligence Specialist | 
+                    Prepared by: Francis Afful Gyan, Business Intelligence Specialist 
                 </div>
 
                 <!-- Executive Summary -->
@@ -366,7 +368,7 @@
                     Analysis at the product category level reveals significant performance disparities:
                 </p>
                 <ul class="feature-list">
-                    <li><strong>Dairy:</strong> Top-performing segment. "Mozzarella 250g" sold over 2.09 million units.</li>
+                    <li><strong>Dairy:</strong> Top performing segment. "Mozzarella 250g" sold over 2.09 million units.</li>
                     <li><strong>Bakery:</strong> Most problematic, exhibiting the highest wastage rate at <strong>14.7%</strong>. Products like "White Sandwich Loaf" are the largest contributors due to short shelf life.</li>
                     <li><strong>Meat:</strong> Highest average price per item (£7.27). Wastage here has a disproportionately large financial impact.</li>
                     <li><strong>Beverages:</strong> Lowest risk profile with an average shelf life of 216.8 days, acting as a logistical buffer.</li>
@@ -400,14 +402,14 @@
                 <h3 class="report-subtitle">7. Strategic Recommendations</h3>
                 
                 <div class="recommendation-box">
-                    <h4>Implement Dynamic, AI-Guided Replenishment for High-Risk Categories</h4>
-                    <p><strong>Action:</strong> Mandate the use of the new forecasting application for all daily and weekly ordering processes within the Bakery and fresh Meat categories across all stores.</p>
+                    <h4>Implement Dynamic, ML-Guided Replenishment for High-Risk Categories</h4>
+                    <p><strong>Action:</strong> Mandate the use of the new ML forecasting application for all daily and weekly ordering processes within the Bakery and fresh Meat categories across all stores.</p>
                     <div class="recommendation-metric">Target: Reduce Bakery wastage from 14.7% to < 9.0% in 6 months.</div>
                 </div>
 
                 <div class="recommendation-box">
                     <h4>Launch a Targeted Wastage Reduction Initiative in the London Region</h4>
-                    <p><strong>Action:</strong> Establish a pilot program in London to fully integrate the ML forecasting tool with store-level operational workflows.</p>
+                    <p><strong>Action:</strong> Establish a pilot program in London to fully integrate the forecasting tool with store-level operational workflows.</p>
                     <div class="recommendation-metric">Target: Decrease London wastage rate by 5% in 1 fiscal year.</div>
                 </div>
 
