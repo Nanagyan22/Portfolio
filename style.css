@@ -27,7 +27,7 @@ html {
 }
 
 /* ===========================================
-FIX for horizontal overflow 
+ horizontal overflow 
 =========================================== 
 */
 html,
@@ -63,6 +63,14 @@ body {
   font-size: 4.5rem;
 }
 
+/* --- NEW REUSABLE SUBTITLE --- */
+.section-subtitle {
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 70rem;
+  margin: 0 auto 3rem auto;
+}
+
 span {
   color: var(--main-color);
 }
@@ -85,7 +93,7 @@ section {
   z-index: 100;
 
   /* ===========================================
-  FIX for header layout
+  header layout
   =========================================== 
   */
   display: flex;
@@ -184,10 +192,7 @@ section {
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
 
-  /* ===========================================
-   (Desktop)
-  =========================================== 
-  */
+  /* (Desktop) */
   width: 3.6rem; /* Was 4rem */
   height: 3.6rem; /* Was 4rem */
   font-size: 1.8rem; /* Was 2rem */
@@ -264,12 +269,7 @@ section {
   background: var(--bg-color);
 }
 
-.services .section-subtitle {
-  text-align: center;
-  font-size: 1.6rem;
-  max-width: 70rem;
-  margin: 0 auto 3rem auto;
-}
+/* --- .services .section-subtitle REMOVED --- */
 
 .services-container {
   display: grid;
@@ -332,12 +332,7 @@ section {
   background: var(--second-bg-color);
 }
 
-.portfolio .section-subtitle {
-  text-align: center;
-  font-size: 1.6rem;
-  max-width: 70rem;
-  margin: 0 auto 3rem auto;
-}
+/* --- .portfolio .section-subtitle REMOVED --- */
 
 .portfolio-container {
   display: grid;
