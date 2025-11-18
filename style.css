@@ -1,8 +1,276 @@
-/* ===========================================
-   NEW/UPDATED STYLES
-   =========================================== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-/* --- 2. Services Section (4-in-a-row) --- */
+/* ===========================================
+   Base Styles & Variables
+   =========================================== */
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 10px */
+}
+
+/* ===========================================
+FIX for horizontal overflow 
+=========================================== 
+*/
+html,
+body {
+  position: relative;
+  background: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden; /* Prevents all horizontal scrolling */
+}
+
+/* ===========================================
+   Reusable Components
+   =========================================== */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/* ===========================================
+   Header
+   =========================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  z-index: 100;
+
+  /* ===========================================
+  FIX for header layout
+  =========================================== 
+  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: var(--transition);
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+
+/* ===========================================
+   Home Section
+   =========================================== */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-img img {
+  width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2.4rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-content {
+  max-width: 60rem;
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content .home-intro {
+  font-size: 1.6rem;
+  max-width: 55rem;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+
+  /* ===========================================
+   (Desktop)
+  =========================================== 
+  */
+  width: 3.6rem; /* Was 4rem */
+  height: 3.6rem; /* Was 4rem */
+  font-size: 1.8rem; /* Was 2rem */
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* ===========================================
+   About Section
+   =========================================== */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 35vw;
+}
+
+.about-content {
+  max-width: 70rem;
+}
+
+.about-content h2 {
+  text-align: left;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.stat-box {
+  min-width: 15rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: var(--bg-color);
+  border-radius: 1rem;
+  border: 1px solid var(--main-color);
+}
+
+.stat-box h3 {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.stat-box p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* ===========================================
+   Services Section
+   =========================================== */
+.services {
+  background: var(--bg-color);
+}
+
+.services .section-subtitle {
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 70rem;
+  margin: 0 auto 3rem auto;
+}
+
 .services-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
@@ -10,36 +278,222 @@
 }
 
 .services-box {
-  /* Add flex to align icon and text */
+  background: var(--second-bg-color);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  transition: 0.5s ease;
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* Removed height property to let content define height */
 }
 
-/* Icon styles for services */
+.services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+  border: 0.2rem solid var(--main-color);
+}
+
 .services-box .bx {
   font-size: 5rem;
   color: var(--main-color);
   margin-bottom: 1rem;
 }
 
-/* --- 3. Portfolio Image Styles --- */
+.services-box h3 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.services-box ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.services-box li {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.services-box li::before {
+  content: "\2713"; /* Checkmark */
+  position: absolute;
+  left: 0;
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* ===========================================
+   Portfolio Section
+   =========================================== */
+.portfolio {
+  background: var(--second-bg-color);
+}
+
+.portfolio .section-subtitle {
+  text-align: center;
+  font-size: 1.6rem;
+  max-width: 70rem;
+  margin: 0 auto 3rem auto;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  background: var(--bg-color);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
 .portfolio-box img {
   width: 100%;
-  height: 200px; /* Give a consistent height */
-  object-fit: cover; /* Make sure image covers the box */
+  height: 200px;
+  object-fit: cover;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-/* --- 5. Contact Form Message Styles --- */
+.portfolio-box h4 {
+  font-size: 2.2rem;
+}
+
+.portfolio-box p {
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem;
+  flex-grow: 1; /* Makes p grow to fill space */
+}
+
+.portfolio-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio-tags span {
+  font-size: 1.2rem;
+  background: var(--second-bg-color);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+
+.portfolio-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.portfolio-links .btn-code,
+.portfolio-links .btn-demo {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.portfolio-links .btn-code {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.portfolio-links .btn-demo {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+}
+
+.portfolio-links .btn-code:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+}
+
+.portfolio-links .btn-demo:hover {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.explore-more-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.explore-more-btn {
+  font-size: 1.8rem;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  transition: var(--transition);
+}
+
+.explore-more-btn:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* ===========================================
+   Contact Section
+   =========================================== */
+.contact {
+  background: var(--bg-color);
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
 .form-message {
   text-align: center;
   margin-top: 1.5rem;
   font-size: 1.6rem;
   font-weight: 600;
-  /* Colors will be set by JavaScript */
 }
 
 .form-message.success {
@@ -50,9 +504,10 @@
   color: #ff4d4d; /* Red */
 }
 
-/* --- 6. New Footer Styles --- */
+/* ===========================================
+   New Footer Section
+   =========================================== */
 .footer {
-  /* Keep existing padding and background */
   padding: 3rem 9% 3rem;
   background: var(--second-bg-color);
   color: #fff;
@@ -130,7 +585,6 @@
   font-size: 1.4rem;
 }
 
-/* Keep the existing footer-iconTop styles */
 .footer-iconTop a {
   display: inline-flex;
   justify-content: center;

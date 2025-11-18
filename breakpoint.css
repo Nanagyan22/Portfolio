@@ -24,11 +24,6 @@
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
-  
-  /* --- REMOVED ---
-     Removed the .services-container rule here.
-     The base style.css (4 columns) will now apply until the 835px breakpoint.
-  */
 }
 
 /* =========================
@@ -41,7 +36,7 @@
 
   #menu-icon {
     display: block;
-    margin-left: 43rem;
+    /* margin-left: 43rem; <-- DELETED. Fixes overflow. */
     font-size: 2.5rem;
   }
   .navbar {
@@ -86,7 +81,8 @@
     margin-top: -15rem;
     text-align: center;
   }
-  .home-content .home-intro { /* Center intro text */
+  .home-content .home-intro {
+    /* Center intro text */
     margin: 1.5rem auto 2.5rem auto;
   }
   .home-content h1 {
@@ -97,11 +93,15 @@
     font-size: 3rem;
   }
   .social-media a {
-    width: 8.5rem;
-    height: 8.5rem;
+    /* ===========================================
+    FIX: Smaller Social Icons (Tablet)
+    =========================================== 
+    */
+    width: 4.5rem; /* Was 8.5rem */
+    height: 4.5rem; /* Was 8.5rem */
     margin-left: 1rem;
     margin-bottom: 2.5rem;
-    font-size: 3.5rem;
+    font-size: 2.2rem; /* Was 3.5rem */
   }
   .btn {
     margin-top: 1.5rem;
@@ -119,20 +119,22 @@
   .about-content p {
     text-align: center;
   }
-  .about-content h2 { /* Fix alignment */
+  .about-content h2 {
+    /* Fix alignment */
     text-align: center;
   }
   .about-content p {
     font-size: 1.3rem;
   }
-  
+
   /* --- UPDATED Services --- */
   .services-container {
     grid-template-columns: repeat(2, 1fr); /* Set to 2 columns */
     gap: 2rem;
   }
   .services-box p,
-  .services-box li { /* Added li */
+  .services-box li {
+    /* Added li */
     font-size: 1.3rem;
   }
 
@@ -177,7 +179,7 @@
 
 @media (max-width: 769px) {
   #menu-icon {
-    margin-left: 35rem;
+    /* margin-left: 35rem; <-- DELETED. Fixes overflow. */
   }
   .home-img img {
     width: 50vw;
@@ -207,7 +209,7 @@
     font-size: 1.8rem;
   }
   #menu-icon {
-    margin-left: -30rem; 
+    /* margin-left: -30rem; <-- DELETED. Fixes overflow. */
     font-size: 2rem;
   }
 
@@ -233,10 +235,14 @@
     margin-bottom: -1rem;
   }
   .social-media a {
-    width: 3.5rem;
-    height: 3.5rem;
+    /* ===========================================
+    FIX: Smaller Social Icons (Mobile)
+    =========================================== 
+    */
+    width: 3.2rem; /* Was 3.5rem */
+    height: 3.2rem; /* Was 3.5rem */
     margin-left: 0.8rem;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Was 2rem */
   }
   .btn {
     font-size: 1.5rem;
@@ -269,7 +275,6 @@
     padding: 1.5rem 2rem;
   }
 
-  
   .contact form .input-box input,
   .contact form textarea {
     font-size: 1rem;
@@ -278,7 +283,7 @@
     height: 20rem;
   }
 
-  /*  Footer text style */
+  /* Footer text style */
   .footer-bottom p {
     font-size: 0.9rem;
   }
@@ -304,7 +309,7 @@
     margin-top: 1.3rem;
     font-size: 1.2rem;
   }
-  
+
   /* Footer text style */
   .footer-bottom p {
     font-size: 0.8rem;
