@@ -205,7 +205,7 @@
 @media (max-width: 429px) {
   /* --- NEW PADDING RULE --- */
   section {
-    padding: 6rem 9%; /* Reduces top/bottom padding for mobile */
+    padding: 6rem 4%; /* Reduces top/bottom padding for mobile */
   }
 
   /* ---  Reduce heading sizes --- */
@@ -299,6 +299,10 @@
   .portfolio-box {
     padding: 1.5rem 2rem;
   }
+  
+  .portfolio-content {
+    padding: 1.5rem; /* Reduced padding for mobile text */
+  }
 
   /* ---  Resize 'Check Out More' button --- */
   .explore-more-btn {
@@ -313,15 +317,24 @@
   .contact form textarea {
     height: 20rem;
   }
+  
+  .contact-container {
+      padding: 1.5rem; /* Less padding on mobile contact box */
+  }
 
   .footer-bottom p {
     font-size: 0.9rem;
+  }
+
+  /* FIX: Reduce footer name size so it stays on one line */
+  .footer-branding h3 {
+    font-size: 1.5rem; 
   }
 }
 @media (max-width: 391px) {
   /* --- NEW PADDING RULE --- */
   section {
-    padding: 5rem 9%; /* Reduces top/bottom padding for small mobile */
+    padding: 5rem 4%; /* Reduces top/bottom padding for small mobile */
   }
 
   .home-content h1 {

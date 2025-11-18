@@ -362,10 +362,10 @@ section {
 .portfolio-box img {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Use cover to fill space perfectly (or contain if you prefer) */
-  border-radius: 0; /* Remove radius so it fits in the box */
-  margin-bottom: 0;
-  border-bottom: 1px solid var(--main-color); /* Line between image and text */
+  object-fit: contain; /* <-- This is the FIX */
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--bg-color); /* <-- This adds a matching background */
 }
 
 /* --- NEW CONTENT WRAPPER --- */
@@ -492,6 +492,9 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  
+  /* FIX FOR MOBILE OVERFLOW */
+  word-break: break-all; /* Forces email to wrap if it hits the edge */
 }
 
 .email-link:hover {
@@ -601,6 +604,8 @@ section {
   margin-bottom: 0;   /* Remove bottom margin so it aligns perfectly */
   font-size: 2.2rem;
   color: var(--main-color);
+  /* FIX FOR NAME WRAPPING */
+  white-space: nowrap; /* Keep name on one line */
 }
 
 .footer-links ul {
