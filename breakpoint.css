@@ -145,6 +145,11 @@
     gap: 3rem;
   }
 
+  /* ENSURE TABLET PROJECTS TOUCH BORDERS */
+  .portfolio-box {
+    padding: 0 !important;
+  }
+
   .contact form {
     max-height: 70rem;
   }
@@ -305,10 +310,12 @@
     grid-template-columns: 1fr;
     gap: 1.4rem;
   }
+  
+  /* CRITICAL: FORCE PADDING 0 ON MOBILE PROJECT BOX */
   .portfolio-box {
-    /* FIX: Ensure 0 padding on mobile for image to touch borders */
     padding: 0 !important; 
   }
+  
   .portfolio-content {
     padding: 1.5rem; 
   }

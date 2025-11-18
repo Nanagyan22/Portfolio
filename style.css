@@ -76,8 +76,7 @@ span {
 }
 
 section {
-  /* min-height: 100vh;  <-- REMOVED */
-  padding: 10rem 9%; /* 10rem top/bottom, 9% left/right */
+  padding: 10rem 9%; 
 }
 
 /* ===========================================
@@ -91,11 +90,6 @@ section {
   padding: 2rem 9%;
   background: var(--bg-color);
   z-index: 100;
-
-  /* ===========================================
-  header layout
-  =========================================== 
-  */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -137,7 +131,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* <-- ADD THIS LINE BACK */
+  min-height: 100vh; 
 }
 
 .home-img img {
@@ -192,11 +186,9 @@ section {
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.5s ease;
-
-  /* (Desktop) */
-  width: 3.6rem; /* Was 4rem */
-  height: 3.6rem; /* Was 4rem */
-  font-size: 1.8rem; /* Was 2rem */
+  width: 3.6rem; 
+  height: 3.6rem; 
+  font-size: 1.8rem; 
 }
 
 .social-media a:hover {
@@ -284,13 +276,12 @@ section {
   display: flex;
   flex-direction: column;
   text-align: center;
-  /* NEW BORDER LINE */
   border: .2rem solid var(--main-color);
 }
 
 .services-box:hover {
   transform: scale(1.02);
-  background: var(--bg-color); /* Slight change on hover */
+  background: var(--bg-color); 
   box-shadow: 0 0 1rem var(--main-color);
 }
 
@@ -327,7 +318,7 @@ section {
 }
 
 /* ===========================================
-   Portfolio Section
+   Portfolio Section (UPDATED)
    =========================================== */
 .portfolio {
   background: var(--second-bg-color);
@@ -346,29 +337,34 @@ section {
   overflow: hidden;
   background: var(--bg-color);
   
-  /* FULL BLEED SETTINGS */
-  padding: 0; /* MUST be 0 for image to touch borders */
+  /* CRITICAL: Padding must be 0 so image touches borders */
+  padding: 0; 
+  
   display: flex;
   flex-direction: column;
   border: .2rem solid var(--main-color);
 }
 
-/* --- UPDATED IMAGE RULE WITH SEPARATOR --- */
+/* --- IMAGE STYLES (UPDATED) --- */
 .portfolio-box img {
   width: 100%;
-  height: 200px;
-  object-fit: contain;
-  border-radius: 0; /* Sharp corners to fit box */
-  margin-bottom: 0;
-  background-color: var(--bg-color);
+  height: 200px; /* Fixed height for uniformity */
   
-  /* FIX: SEPARATOR LINE BETWEEN IMAGE AND TEXT */
+  /* Use 'cover' to fill the space completely. 
+     It might crop slightly, but it guarantees no gaps. */
+  object-fit: cover; 
+  
+  border-radius: 0; 
+  margin-bottom: 0;
+  display: block; /* Removes small gap at bottom of inline images */
+  
+  /* Line separating image and text */
   border-bottom: .2rem solid var(--main-color); 
 }
 
-/* --- NEW CONTENT WRAPPER --- */
+/* --- CONTENT WRAPPER --- */
 .portfolio-content {
-  padding: 2rem; /* Add padding back for the text */
+  padding: 2rem; 
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -381,7 +377,7 @@ section {
 .portfolio-box p {
   font-size: 1.4rem;
   margin: 1rem 0 2rem;
-  flex-grow: 1; /* Makes p grow to fill space */
+  flex-grow: 1;
 }
 
 .portfolio-tags {
@@ -462,7 +458,6 @@ section {
   background: var(--bg-color);
 }
 
-/* --- NEW CONTACT CONTAINER WITH BORDER --- */
 .contact-container {
   max-width: 70rem;
   margin: 0 auto;
@@ -473,7 +468,6 @@ section {
   box-shadow: 0 0 1rem var(--main-color);
 }
 
-/* --- NEW DIRECT EMAIL STYLES --- */
 .contact-info {
   text-align: center;
   margin-bottom: 2rem;
@@ -490,9 +484,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  
-  /* FIX FOR MOBILE OVERFLOW */
-  word-break: break-all; /* Forces email to wrap if it hits the edge */
+  word-break: break-all; 
 }
 
 .email-link:hover {
@@ -517,7 +509,7 @@ section {
   padding: 1.5rem;
   font-size: 1.6rem;
   color: var(--text-color);
-  background: var(--bg-color); /* Contrast against container */
+  background: var(--bg-color);
   border-radius: 0.8rem;
   margin: 0.7rem 0;
 }
@@ -551,7 +543,7 @@ section {
 }
 
 /* ===========================================
-   New Footer Section
+   Footer
    =========================================== */
 .footer {
   padding: 3rem 9% 3rem;
@@ -579,30 +571,26 @@ section {
   line-height: 1.6;
 }
 
-/* ===========================================
-   Footer Branding (Image + Name)
-   =========================================== */
 .footer-branding {
   display: flex;
-  align-items: center; /* Vertically center the image with text */
-  gap: 1.5rem;         /* Space between image and name */
+  align-items: center; 
+  gap: 1.5rem;         
   margin-bottom: 1.5rem;
 }
 
 .footer-branding img {
-  width: 5rem;        /* Small size */
-  height: 5rem;       /* Small size */
-  border-radius: 50%; /* Make it a circle */
-  object-fit: cover;  /* Ensure image doesn't stretch */
-  border: 0.2rem solid var(--main-color); /* Optional: Add a cool border */
+  width: 5rem;       
+  height: 5rem;       
+  border-radius: 50%; 
+  object-fit: cover;  
+  border: 0.2rem solid var(--main-color); 
 }
 
 .footer-branding h3 {
-  margin-bottom: 0;   /* Remove bottom margin so it aligns perfectly */
+  margin-bottom: 0;   
   font-size: 2.2rem;
   color: var(--main-color);
-  /* FIX FOR NAME WRAPPING */
-  white-space: nowrap; /* Keep name on one line */
+  white-space: nowrap; 
 }
 
 .footer-links ul {
