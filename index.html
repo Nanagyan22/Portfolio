@@ -14,7 +14,8 @@
     <!-- LINKEDIN / SOCIAL MEDIA PREVIEW TAGS (OPEN GRAPH) -->
     <meta property="og:title" content="Francis Afful Gyan | Data Science Portfolio" />
     <meta property="og:description" content="Explore my portfolio of Data Analytics, Machine Learning, Business Intelligence, AI solutions, and Predictive Modeling projects." />
-    <meta property="og:image" content="https://portfolio-six-delta-33.vercel.app/FrancisAffulGyan_Portfolio.jpg" />
+    <!-- Updated OG Image path -->
+    <meta property="og:image" content="https://portfolio-six-delta-33.vercel.app/img/FrancisAffulGyan_Portfolio.jpg" />
     <meta property="og:url" content="https://portfolio-six-delta-33.vercel.app/" /> 
     <meta property="og:type" content="website" />
 
@@ -84,7 +85,7 @@
 
       <div class="home-img">
         <img
-          src="portpic.png"
+          src="img/portpic.png"
           alt="Profile picture of Francis Afful Gyan"
           loading="lazy"
         />
@@ -94,7 +95,7 @@
     <section class="about" id="about">
       <div class="about-img">
         <img
-          src="portpic2.png"
+          src="img/portpic2.png"
           alt="A second profile picture of Francis Afful Gyan"
           loading="lazy"
         />
@@ -103,14 +104,13 @@
       <div class="about-content">
         <h2 class="heading">About <span>Me</span></h2>
         <p>
-          Data Scientist with experience delivering analytical, predictive, 
-          and machine learning solutions across logistics, education, oil & gas, 
-          telehealth, and consulting. I turn complex, multi-source datasets into 
-          strategic insights that improve decisions, optimize operations, and create 
-          measurable business value. Skilled in Python, SQL, Power BI, Tableau, 
-          Looker Studio, scikit-learn, and cloud platforms (Azure/AWS), with strong 
-          expertise in statistical modeling, experimentation, and end-to-end machine 
-          learning development.
+          Data Scientist with hands-on experience applying analytics, predictive modeling, 
+          and machine learning to solve real-world business problems across multiple industries. 
+          I transform complex datasets into clear, actionable insights that support decision-making,
+          streamline operations, and deliver measurable value. Skilled in Python, SQL, and modern BI
+          tools (Power BI, Tableau, Looker Studio), with strong capabilities in statistical analysis,
+          experimentation, and building end-to-end machine learning solutions on cloud platforms such
+          as Azure and AWS.
         </p>
 
         <div class="about-stats">
@@ -198,12 +198,39 @@
 
       <div class="portfolio-container">
         
-        <!-- PROJECT 1: Perishable Demand -->
+        <!-- 1. MedOptix Forecasting -->
         <div class="portfolio-box">
           <div class="portfolio-img-container">
-             <img src="Perishable.png" class="active" alt="Perishable 1" />
-             <img src="Perishable2.jpg" alt="Perishable 2" />
-             <img src="Perishable3.jpg" alt="Perishable 3" />
+             <img src="img/header_sarima.png" class="active" alt="MedOptix 1" />
+             <img src="img/Sarima_results.png" alt="MedOptix 2" />
+             <img src="img/model_sarima.png" alt="MedOptix 3" />
+          </div>
+          <div class="portfolio-content">
+            <h4>MedOptix Forecasting</h4>
+            <p>
+              A predictive capacity management suite forecasting patient inflows 
+              7–30 days in advance using SARIMAX and ML-driven forecasting...
+            </p>
+            <div class="portfolio-tags">
+              <span>Python</span>
+              <span>SARIMAX</span>
+              <span>Power BI</span>
+              <span>Healthcare</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="project-medoptix.html" class="btn-code">Read More</a>
+              <a href="https://medoptix-analytics.streamlit.app/" class="btn-demo">Demo</a>
+              <a href="https://github.com/nanagyan22/Medoptix-Analytics" class="btn-code">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Perishable Demand Predictor -->
+        <div class="portfolio-box">
+          <div class="portfolio-img-container">
+             <img src="img/Perishable.png" class="active" alt="Perishable 1" />
+             <img src="img/Perishable2.jpg" alt="Perishable 2" />
+             <img src="img/Perishable3.jpg" alt="Perishable 3" />
           </div>
           <div class="portfolio-content">
             <h4>Perishable Demand Predictor</h4>
@@ -218,45 +245,18 @@
             </div>
             <div class="portfolio-links">
               <a href="project-perishables.html" class="btn-code">Read More</a>
+              <a href="https://perishables.streamlit.app" class="btn-demo">Demo</a>
               <a href="https://github.com/Nanagyan22/Predicting_Perishables-" class="btn-code">Code</a>
-              <a href="https://perishables.streamlit.app" class="btn-demo">Demo</a>            
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 2: Customer Churn (Telecom) -->
+        <!-- 3. Microfinance Credit Risk -->
         <div class="portfolio-box">
           <div class="portfolio-img-container">
-             <img src="Telecom.jpg" class="active" alt="Telecom 1" />
-             <img src="Telecom1.jpg" alt="Telecom 2" />
-             <img src="Telecom3.jpg" alt="Telecom 3" />
-          </div>
-          <div class="portfolio-content">
-            <h4>Customer Churn Predictor</h4>
-            <p>
-              An end-to-end machine learning solution for predicting and 
-              preventing customer churn at Reder Telecom...
-            </p>
-            <div class="portfolio-tags">
-              <span>Python</span>
-              <span>Streamlit</span>
-              <span>ML</span>
-            </div>
-            <div class="portfolio-links">
-              <!-- Placeholder for later -->
-              <span class="btn-code" style="cursor: default; opacity: 0.6;">Coming Soon</span>
-              <a href="https://github.com/Nanagyan22/New_Project_Churn" class="btn-code">Code</a>
-              <a href="https://newprojectchurn.streamlit.app" class="btn-demo">Demo</a>              
-            </div>
-          </div>
-        </div>
-
-        <!-- PROJECT 3: Microfinance -->
-        <div class="portfolio-box">
-          <div class="portfolio-img-container">
-             <img src="loan3.jpg" class="active" alt="Loan 3" />
-             <img src="loan2.jpg" alt="Loan 2" />
-             <img src="loan.jpg" alt="Loan 1" />
+             <img src="img/loan3.jpg" class="active" alt="Loan 3" />
+             <img src="img/loan2.jpg" alt="Loan 2" />
+             <img src="img/loan.jpg" alt="Loan 1" />
           </div>
           <div class="portfolio-content">
             <h4>Microfinance Credit Risk</h4>
@@ -270,45 +270,45 @@
               <span>Random Forest</span>
             </div>
             <div class="portfolio-links">
-              <!-- Placeholder for later -->
-              <span class="btn-code" style="cursor: default; opacity: 0.6;">Coming Soon</span>
+              <a href="project-loan.html" class="btn-code">Read More</a>
+              <a href="https://loan-default-prediction-rural.streamlit.app" class="btn-demo">Demo</a>
               <a href="https://github.com/Nanagyan22/Loan-Default-Prediction-Rural-MFIs/tree/main" class="btn-code">Code</a>
-              <a href="https://loan-default-prediction-rural.streamlit.app" class="btn-demo">Demo</a>              
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 4: Fitness Analytics -->
+        <!-- 4. Customer Churn Predictor (Telecom) -->
         <div class="portfolio-box">
           <div class="portfolio-img-container">
-             <img src="iron.jpg" class="active" alt="Fitness 1" />
-             <img src="iron2.jpg" alt="Fitness 2" />
-             <img src="iron.jpg" alt="Fitness 3" />
+             <img src="img/Telecom.jpg" class="active" alt="Telecom 1" />
+             <img src="img/Telecom1.jpg" alt="Telecom 2" />
+             <img src="img/Telecom3.jpg" alt="Telecom 3" />
           </div>
           <div class="portfolio-content">
-            <h4>Fitness Analytics & BI</h4>
+            <h4>Customer Churn Predictor</h4>
             <p>
-              A data-driven analytics project combining Data Science and Business Intelligence to optimize gym operations...
+              An end-to-end machine learning solution for predicting and 
+              preventing customer churn at Reder Telecom...
             </p>
             <div class="portfolio-tags">
-              <span>Power BI</span>
-              <span>DAX</span>
+              <span>Python</span>
               <span>Streamlit</span>
+              <span>ML</span>
             </div>
             <div class="portfolio-links">
-              <a href="project-fitness.html" class="btn-code">Read More</a>
-              <a href="https://github.com/Nanagyan22/Iron-Core-Fitness" class="btn-code">Code</a>
-              <a href="https://iron-core-fitness.streamlit.app" class="btn-demo">Demo</a>              
+              <a href="project-churn.html" class="btn-code">Read More</a>
+              <a href="https://newprojectchurn.streamlit.app" class="btn-demo">Demo</a>
+              <a href="https://github.com/Nanagyan22/New_Project_Churn" class="btn-code">Code</a>
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 5: Home Tech -->
+        <!-- 5. Home Tech Analytics -->
         <div class="portfolio-box">
           <div class="portfolio-img-container">
-             <img src="Tech.jpg" class="active" alt="Tech 1" />
-             <img src="Tech2.jpg" alt="Tech 2" />
-             <img src="Tech3.jpg" alt="Tech 3" />
+             <img src="img/Tech.jpg" class="active" alt="Tech 1" />
+             <img src="img/Tech2.jpg" alt="Tech 2" />
+             <img src="img/Tech3.jpg" alt="Tech 3" />
           </div>
           <div class="portfolio-content">
             <h4>Home Tech Analytics</h4>
@@ -323,18 +323,43 @@
             </div>
             <div class="portfolio-links">
               <a href="project-tech.html" class="btn-code">Read More</a>
+              <a href="https://home-tech-solution.streamlit.app" class="btn-demo">Demo</a>
               <a href="https://github.com/Nanagyan22/Home-Tech-Solution" class="btn-code">Code</a>
-              <a href="https://home-tech-solution.streamlit.app" class="btn-demo">Demo</a>              
             </div>
           </div>
         </div>
 
-        <!-- PROJECT 6: Banking Churn -->
+        <!-- 6. Fitness Analytics & BI -->
         <div class="portfolio-box">
           <div class="portfolio-img-container">
-             <img src="Bank.jpg" class="active" alt="Bank 1" />
-             <img src="Bank2.jpg" alt="Bank 2" />
-             <img src="Bank3.jpg" alt="Bank 3" />
+             <img src="img/iron.jpg" class="active" alt="Fitness 1" />
+             <img src="img/iron2.jpg" alt="Fitness 2" />
+             <img src="img/iron.jpg" alt="Fitness 3" />
+          </div>
+          <div class="portfolio-content">
+            <h4>Fitness Analytics & BI</h4>
+            <p>
+              A data-driven analytics project combining Data Science and Business Intelligence to optimize gym operations...
+            </p>
+            <div class="portfolio-tags">
+              <span>Power BI</span>
+              <span>DAX</span>
+              <span>Streamlit</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="project-fitness.html" class="btn-code">Read More</a>
+              <a href="https://iron-core-fitness.streamlit.app" class="btn-demo">Demo</a>
+              <a href="https://github.com/Nanagyan22/Iron-Core-Fitness" class="btn-code">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Customer Churn Analytics (Banking) -->
+        <div class="portfolio-box">
+          <div class="portfolio-img-container">
+             <img src="img/Bank.jpg" class="active" alt="Bank 1" />
+             <img src="img/Bank2.jpg" alt="Bank 2" />
+             <img src="img/Bank3.jpg" alt="Bank 3" />
           </div>
           <div class="portfolio-content">
             <h4>Customer Churn Analytics</h4>
@@ -349,8 +374,61 @@
             </div>
             <div class="portfolio-links">
               <a href="project-bank.html" class="btn-code">Read More</a>
+              <a href="https://bankchurnaz.streamlit.app" class="btn-demo">Demo</a>
               <a href="https://github.com/Nanagyan22/Bank_Churn" class="btn-code">Code</a>
-              <a href="https://bankchurnaz.streamlit.app" class="btn-demo">Demo</a>              
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. OptiSecure Renewal Analysis -->
+        <div class="portfolio-box">
+          <div class="portfolio-img-container">
+             <img src="img/Header.png" class="active" alt="OptiSecure 1" />
+             <img src="img/header.jpg" alt="OptiSecure 2" />
+             <img src="img/Header.png" alt="OptiSecure 3" />
+          </div>
+          <div class="portfolio-content">
+            <h4>OptiSecure Renewal Analysis</h4>
+            <p>
+              End-to-end analytics solution forecasting policy renewals and optimizing 
+              campaigns using Predictive Modeling and an AI Looker Studio assistant...
+            </p>
+            <div class="portfolio-tags">
+              <span>Looker Studio</span>
+              <span>Gemini AI</span>
+              <span>Predictive ML</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="project-optisecure.html" class="btn-code">Read More</a>
+              <a href="https://renewal-analysis.streamlit.app/" class="btn-demo">Demo</a>
+              <!-- Added placeholder Code link to maintain button layout -->
+              <a href="#" class="btn-code">Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. KlinItAll -->
+        <div class="portfolio-box">
+          <div class="portfolio-img-container">
+             <img src="img/banner-image.png" class="active" alt="KlinItAll 1" />
+             <img src="img/Home1.png" alt="KlinItAll 2" />
+             <img src="img/Upload.png" alt="KlinItAll 3" />
+          </div>
+          <div class="portfolio-content">
+            <h4>KlinItAll System</h4>
+            <p>
+              A modular, production-ready, and extensible data preprocessing system 
+              designed to clean, prepare, and analyze structured datasets...
+            </p>
+            <div class="portfolio-tags">
+              <span>Streamlit</span>
+              <span>Python</span>
+              <span>Automated Cleaning</span>
+            </div>
+            <div class="portfolio-links">
+              <a href="project-klinitall.html" class="btn-code">Read More</a>
+              <a href="https://klinitall.streamlit.app/" class="btn-demo">Demo</a>
+              <a href="https://github.com/Nanagyan22/KlinItAll/tree/main" class="btn-code">Code</a>
             </div>
           </div>
         </div>
@@ -410,7 +488,7 @@
       <div class="footer-container">
         <div class="footer-about">
           <div class="footer-branding">
-            <img src="footer-pic.jpg" alt="Francis" />
+            <img src="img/footer-pic.jpg" alt="Francis" />
             <h3>Francis Afful Gyan</h3>
           </div>
 

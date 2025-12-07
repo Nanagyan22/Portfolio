@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedOptix Analytics - Francis Afful Gyan</title>
+    
+    <!-- VERCEL ANALYTICS SCRIPT -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script src="/_vercel/insights/script.js"></script>
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="breakpoint.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">Port<span>folio.</span></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Project Details Section -->
+    <section class="project-details">
+        
+        <!-- Navigation Back -->
+        <a href="index.html#portfolio" class="back-btn">
+            <i class='bx bx-left-arrow-alt'></i> Back to Projects
+        </a>
+
+        <!-- Title Area -->
+        <div class="project-header">
+            <h1 class="heading" style="text-align: left;">MedOptix Forecasting</h1>
+            <div class="project-meta">
+                <span>Python</span>
+                <span>SARIMAX</span>
+                <span>Power BI</span>
+                <span>Streamlit</span>
+                <span>Healthcare AI</span>
+            </div>
+        </div>
+
+
+         <!-- VIDEO DEMO -->
+        <div class="video-wrapper">
+            
+            <video controls poster="img/header_sarima.png">
+                <source src="videos/MedOptix.mp4" type="MedOptix.mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="project-content">
+            
+            <!-- 1. Overview -->
+            <h2>Overview</h2>
+            <p>
+                <strong>MedOptix Forecasting</strong> is a predictive capacity management suite developed as part of <strong>The HealSight Initiative</strong> to address critical inefficiencies in hospital operations.
+            </p>
+            <p>
+                By transitioning from reactive responses to proactive AI-driven planning, the system forecasts patient inflows 7–30 days in advance and increased bed utilization efficiency to <strong>88%</strong> and reduced overtime costs significantly.
+            </p>
+            
+            <!-- 2. Key Objectives -->
+            <h2>Project Objectives</h2>
+            <ul class="feature-list">
+                <li><i class='bx bx-check-circle'></i> <strong>Forecasting:</strong> Predict patient inflows 7–30 days in advance with >85% accuracy using SARIMAX.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Real-Time BI:</strong> Visualize real-time bottlenecks across ED, ICU, MED, and SURG wards.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Resource Optimization:</strong> Optimize bed allocation to reduce overflow incidents and overtime costs.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Scenario Planning:</strong> Stress-test capacity against hypothetical surges.</li>
+            </ul>
+
+            <!-- 4. Deployment Links -->
+            <div class="portfolio-links" style="margin: 3rem 0;">
+                <a href="https://github.com/nanagyan22/Medoptix-Analytics" target="_blank" class="btn-code">
+                    <i class='bx bxl-github'></i> View Source Code
+                </a>
+                <a href="https://medoptix-analytics.streamlit.app/" target="_blank" class="btn-demo">
+                    <i class='bx bx-laptop'></i> Live Demo App
+                </a>
+            </div>
+
+            <!-- FULL REPORT SECTION -->
+            <!-- =========================================== -->
+            <div class="report-section">
+                <h2 class="report-title">Project Report: MedOptix Forecasting</h2>
+                <div class="report-meta">
+                    Author: Francis Afful Gyan | Business Analyst & Data Scientist
+                </div>
+
+                <!-- Executive Summary / Impact -->
+                <h3 class="report-subtitle">1. Impact & Results</h3>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <h4>Bed Efficiency</h4>
+                        <span style="color: #00fbff;">88%</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Overtime Savings</h4>
+                        <span>€35k/mo</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Forecast Accuracy</h4>
+                        <span>88.4%</span>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>Wait Time Impact</h4>
+                        <span style="color: #ff4d4d;">-25%</span>
+                    </div>
+                </div>
+
+                <!-- Business Problem -->
+                <h3 class="report-subtitle">2. Business Problem: The Reactive Trap</h3>
+                <p>
+                    The hospital network was operating purely reactively, making staffing decisions only after surges occurred. This led to a <strong>20% inefficiency in bed allocation</strong> (beds empty in one ward, overflow in another) and a financial strain of <strong>€125,000/month</strong> spent on reactive overtime.
+                </p>
+
+                <!-- Architecture -->
+                <h3 class="report-subtitle">3. Solution Architecture & Tools</h3>
+                <p>Implemented a "Hybrid Intelligence" stack combining deep analytics with user-friendly interfaces.</p>
+                <ul class="feature-list">
+                    <li><strong>Data Processing:</strong> Python (Pandas, NumPy) for cleaning 19,000+ records.</li>
+                    <li><strong>Modeling:</strong> Statsmodels (SARIMAX) for time-series forecasting.</li>
+                    <li><strong>Frontend:</strong> Streamlit (Python) for the interactive scenario planning tool.</li>
+                    <li><strong>BI Layer:</strong> Microsoft Power BI (Embedded) for real-time executive dashboards.</li>
+                    <li><strong>Deployment:</strong> Docker & Docker Hub (Containerization) on Streamlit Cloud.</li>
+                </ul>
+                
+                <div class="recommendation-box" style="border-left-color: #00fbff;">
+                    <h4>Why SARIMAX?</h4>
+                    <p>Selected <strong>SARIMAX</strong> over Prophet or standard ARIMA because of <strong>Explainability</strong>. It explicitly models "External Drivers" (like Staffing Index), allowing administrators to understand <em>why</em> a surge is coming, not just <em>that</em> it is coming.</p>
+                </div>
+
+                <!-- Data Insights -->
+                <h3 class="report-subtitle">4. Key Data Insights</h3>
+                <p><strong>A. The "Staffing Index" Correlation:</strong> When the Staffing Index falls below 0.95, the discharge rate slows significantly, creating an "artificial" demand surge the following day.</p>
+                <p><strong>B. The Overflow Trigger:</strong> I identified a "Tipping Point" at <strong>92% occupancy</strong>. Once exceeded, the rate of Overflow Incidents doubles. The dashboard now flags risks before this threshold is hit.</p>
+                <p><strong>C. Demographic Wait Times:</strong> Patients aged 40–59 experience the longest wait times (~60 mins), revealing a "priority gap" in triage protocols compared to seniors and pediatric cases.</p>
+
+                <!-- Model Performance -->
+                <h3 class="report-subtitle">5. Model Performance Metrics</h3>
+                <p>The SARIMAX model was validated against historical data with high precision:</p>
+                <div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="kpi-card">
+                        <h4>R² Score</h4>
+                        <span>88.4%</span>
+                        <p style="font-size: 0.8rem; color: #aaa; margin-top: 0.5rem;">Variance Explained</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>RMSE</h4>
+                        <span>0.553</span>
+                        <p style="font-size: 0.8rem; color: #aaa; margin-top: 0.5rem;">Avg Error (Patients)</p>
+                    </div>
+                    <div class="kpi-card">
+                        <h4>MAE</h4>
+                        <span>0.463</span>
+                        <p style="font-size: 0.8rem; color: #aaa; margin-top: 0.5rem;">Absolute Error</p>
+                    </div>
+                </div>
+
+                <!-- Deliverables -->
+                <h3 class="report-subtitle">6. Key Deliverables</h3>
+                <ul class="feature-list">
+                    <li><i class='bx bx-cube'></i> <strong>AI Forecast Tool:</strong> Allows managers to input current stats and "Stress Test" capacity (e.g., "What if 10% of beds close?").</li>
+                    <li><i class='bx bx-bar-chart-alt-2'></i> <strong>Executive Dashboard:</strong> Real-time tracking of KPIs with an automated traffic-light risk system (🟢 🟡 🔴).</li>
+                    <li><i class='bx bx-server'></i> <strong>Containerized Deployment:</strong> Packaged in Docker to ensure identical performance across all environments.</li>
+                </ul>
+
+                <!-- Recommendations -->
+                <h3 class="report-subtitle">7. Recommendations & Next Steps</h3>
+                
+                <div class="recommendation-box">
+                    <h4>Operational Adoption</h4>
+                    <p><strong>Action:</strong> Mandate the use of the Power BI Risk Card during morning operational standups.</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>Proactive Staffing</h4>
+                    <p><strong>Action:</strong> Trigger overtime shifts only when the Forecast Tool predicts "High Risk" capacity for the next 48 hours, eliminating reactive spending.</p>
+                </div>
+
+                <div class="recommendation-box">
+                    <h4>Strategic Roadmap</h4>
+                    <p><strong>Action:</strong> Review triage protocols for the 40–59 age demographic and move from batch CSV updates to real-time IoT streaming using Azure Event Hubs.</p>
+                </div>
+
+                <!-- Conclusion -->
+                <h3 class="report-subtitle">8. Conclusion</h3>
+                <p>
+                    MedOptix Analytics has successfully demonstrated that data-driven decision-making can solve physical capacity problems. By predicting demand before it happens, we have moved the hospital network from "Putting out fires" to "Preventing them."
+                </p>
+
+            </div>
+            <!-- End of Report -->
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2025 Francis Afful Gyan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>
